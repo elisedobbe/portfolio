@@ -56,7 +56,7 @@ body,
 .md-header__title,
 .md-header__title .md-header__topic {
   color: var(--fg) !important;
-  font-weight: 300;
+  font-weight: 450;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 28px;
