@@ -181,3 +181,72 @@ body,
 .md-tabs__item:first-child {
   display: none !important;
 }
+
+/* =========================
+   FINAL GRID LOCK (FULLSCREEN LOOK)
+   Juster kun --gutter og --header-top
+   ========================= */
+
+:root{
+  --gutter: 56px;     /* ← ENDRE DENNE for mindre/mer innrykk */
+  --header-top: 22px; /* ← litt mer luft over header-navnet */
+  --tabs-gap: 64px;   /* avstand mellom Projects / About / CV */
+}
+
+/* 1) SAMME VENSTRE/HØYRE KANT OVERALT */
+.md-header__inner,
+.md-tabs__inner,
+.md-main__inner,
+.md-footer::before {
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
+}
+
+/* 2) FJERN “SKJULTE” INNRYKK FRA MATERIAL I INNHOLD */
+.md-content,
+.md-content__inner,
+.md-typeset {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 3) HEADER: plassering + typografi som i referansen */
+.md-header__inner{
+  padding-top: var(--header-top) !important;
+  padding-bottom: 14px !important;
+  align-items: flex-start !important;
+}
+
+.md-header__topic{
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* 4) MENY: samme linjehøyde, fast spacing, ingen bokser */
+.md-tabs__list{
+  justify-content: flex-end !important;
+}
+
+.md-tabs__link{
+  margin-left: var(--tabs-gap) !important;
+  padding: 0 !important;
+  background: transparent !important;
+  line-height: 1 !important;
+  font-size: 16px !important;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active{
+  background: transparent !important;
+  color: var(--accent) !important;
+}
+
+/* 5) Footer: mer luft, samme grid */
+.md-footer::before{
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+  line-height: 1.9 !important;
+}
