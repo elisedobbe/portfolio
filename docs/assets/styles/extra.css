@@ -437,3 +437,89 @@ body,
 
 /* (Valgfritt) hvis du vil at hele siden skal være litt “bredere” */
 .md-grid { max-width: 1400px !important; }
+
+/* =========================
+   HEADER – STRAM OG LINJERT
+   ========================= */
+
+.md-header {
+  background-color: #1e1e1e;
+}
+
+/* FJERN Material sin default gutter */
+.md-header__inner {
+  max-width: none;
+  padding-left: 3rem;   /* ← JUSTER DENNE */
+  padding-right: 3rem;  /* ← OG DENNE */
+  padding-top: 1.2rem;  /* litt mer luft over */
+  padding-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-end; /* ← BUNN-LINJER LOGO + MENY */
+}
+
+/* Logo / navn */
+.md-header__title {
+  margin: 0;
+}
+
+.md-header__topic {
+  font-family: "TT Fors", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: #fdfeff;
+}
+
+/* Meny (tabs) */
+.md-tabs {
+  margin-left: auto; /* skyv til høyre */
+}
+
+.md-tabs__list {
+  align-items: flex-end;
+}
+
+.md-tabs__item {
+  margin-left: 2rem;
+}
+
+/* Fjern blå boks rundt aktiv side */
+.md-tabs__link {
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #fdfeff;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #acdcff;
+  background: none;
+}
+
+/* Samme venstre kant for header og innhold */
+.md-main__inner {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.md-footer {
+  background-color: #1e1e1e;
+  padding: 2rem 3rem;
+}
+
+.md-footer__inner {
+  display: block;
+}
+
+.md-footer__inner p {
+  margin: 0.4rem 0;
+  line-height: 1.6;
+  font-family: "Muli", sans-serif;
+  font-size: 0.85rem;
+  color: #fdfeff;
+}
