@@ -341,3 +341,67 @@ body,
   border-bottom: none !important;
   box-shadow: none !important;
 }
+
+/* =========================
+   HEADER ALIGNMENT (fullskjerm)
+   ========================= */
+
+/* 1) Felles side-margin (samme som innholdet) */
+:root{
+  --gutter: 64px;         /* juster denne hvis du vil litt mer/mindre */
+  --header-top: 14px;     /* mer luft over navnet */
+}
+
+/* Samme padding venstre/høyre for header + tabs + main */
+.md-header__inner,
+.md-tabs__inner,
+.md-main__inner {
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
+}
+
+/* 2) Litt mer luft over navnet (ca 1.5x) */
+.md-header__inner {
+  padding-top: var(--header-top) !important;
+  padding-bottom: 10px !important;
+}
+
+/* Fjern små “dytt” som gjør alignment uforutsigbar */
+.md-header__title {
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 3) Baseline alignment: tabs og navn på samme bunnlinje */
+.md-header__inner,
+.md-tabs__inner {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Tabs-linja: ingen ekstra padding som skyver teksten */
+.md-tabs__list {
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: flex-end !important;
+}
+
+/* Menypunkt: null padding, styrt av line-height */
+.md-tabs__link {
+  padding: 0 !important;
+  margin: 0 18px !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  vertical-align: bottom !important;
+}
+
+/* Sørg for at siste punkt ikke blir kuttet */
+.md-tabs__inner {
+  overflow: visible !important;
+}
+
+/* (valgfritt) litt mer “luft” mellom header og innhold */
+.md-main {
+  padding-top: 10px !important;
+}
