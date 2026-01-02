@@ -1,0 +1,134 @@
+/* =========================================================
+   Elise Dobbe portfolio – kantete stil
+   Farger:
+   - Hvit: #fdfeff
+   - Svart: #1e1e1e
+   - Blå accent: #acdcff
+   ========================================================= */
+
+@font-face {
+  font-family: "TT Fors";
+  src: url("../fonts/TT-Fors.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #fdfeff;
+  --fg: #1e1e1e;
+  --accent: #acdcff;
+
+  --font-heading: "TT Fors", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-body: "Muli", "Mulish", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  --radius: 0px;
+
+  --h1: 4.2rem;
+  --h2: 1.6rem;
+  --body: 1.05rem;
+  --line: 1.7;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Kantete alt */
+* { border-radius: var(--radius) !important; }
+
+/* Brødtekst */
+.md-typeset {
+  font-family: var(--font-body) !important;
+  font-size: var(--body);
+  line-height: var(--line);
+  color: var(--fg);
+}
+
+/* Overskrifter */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: var(--font-heading) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.md-typeset h1 { font-size: var(--h1); }
+.md-typeset h2 { font-size: var(--h2); }
+
+/* Header (topplinja) */
+.md-header {
+  background: var(--bg);
+  color: var(--fg);
+  border-bottom: 2px solid var(--fg);
+}
+
+.md-header__title,
+.md-header__title .md-header__topic {
+  font-family: var(--font-heading) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg) !important;
+}
+
+/* Venstremeny */
+.md-sidebar--primary {
+  border-right: 2px solid var(--fg);
+}
+
+.md-nav, .md-nav__link {
+  font-family: var(--font-body) !important;
+}
+
+.md-nav__link--active {
+  background: var(--accent);
+  color: var(--fg) !important;
+}
+
+.md-nav__link:hover {
+  background: var(--accent);
+}
+
+/* Lenker */
+.md-typeset a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+.md-typeset a:hover {
+  background: var(--accent);
+}
+
+/* Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  border: 2px solid var(--fg);
+  padding: 18px;
+  background: var(--bg);
+}
+
+.project-card h2 {
+  margin-top: 0;
+}
+
+/* Mobil: 1 kolonne */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Video */
+.video video {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--fg);
+  margin-top: 1rem;
+}
