@@ -1,0 +1,15 @@
+mkdocs.yml
+docs/
+  index.md
+  projects.md
+  about.md
+  cv.md
+  assets/
+    styles/
+      extra.css
+    fonts/
+      TT-Fors.woff2
+    media/
+      demo.mp4
+    files/
+      Elise-Dobbe-CV.pdf
