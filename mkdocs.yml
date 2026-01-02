@@ -1,7 +1,6 @@
-site_name: ELISE DOBBE   ED
+site_name: ELISE DOBBE
 
 nav:
-  - Home: index.md
   - Projects: projects.md
   - About: about.md
   - CV: cv.md
