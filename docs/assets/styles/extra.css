@@ -272,3 +272,72 @@ body,
 .md-header__title {
   padding-left: 0 !important;
 }
+
+/* =========================
+   FINAL HEADER/TABS + FOOTER POLISH
+   ========================= */
+
+/* Litt ned og litt til høyre for navnet (bittelitt) */
+.md-header__title {
+  transform: translate(6px, 4px);
+}
+
+/* Tabs: sørg for samme “bunnlinje” som headeren og at de ikke kuttes */
+.md-header__inner,
+.md-tabs__inner {
+  align-items: center !important;
+}
+
+.md-tabs {
+  overflow: visible !important;
+}
+
+.md-tabs__list {
+  align-items: center !important;
+}
+
+/* Ikke la tabs havne for langt ned pga padding */
+.md-tabs__link {
+  padding: 0 !important;
+  margin: 0 18px !important;
+  line-height: 1 !important;
+  height: auto !important;
+
+  /* Muli/Mulish på meny */
+  font-family: var(--font-body) !important;
+
+  /* Ingen “boks” */
+  background: transparent !important;
+}
+
+/* Hover/active: kun farge (ingen firkant) */
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  background: transparent !important;
+  color: #acdcff !important;
+}
+
+/* Sørg for at selve teksten ikke blir “cut off” */
+.md-tabs__link span,
+.md-tabs__link {
+  display: inline-block !important;
+  overflow: visible !important;
+}
+
+/* Gi litt mer luft til høyre så CV ikke havner utenfor */
+.md-tabs__inner {
+  padding-right: 28px !important;
+}
+
+/* Footer: større linjeavstand + ryddig spacing */
+.md-footer::before {
+  line-height: 1.9 !important;
+  padding: 22px 18px !important;
+}
+
+/* Fjern eventuelle underlinjer/border som kan se ut som streker */
+.md-header,
+.md-tabs {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
