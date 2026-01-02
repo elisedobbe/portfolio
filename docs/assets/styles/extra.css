@@ -1,5 +1,5 @@
 /* =========================================================
-   Dark / clean / kantete
+   Elise Dobbe – Dark / clean / kantete
    Base: #1e1e1e, text: #fdfeff, accent: #acdcff
    ========================================================= */
 
@@ -8,7 +8,15 @@
   --fg: #fdfeff;
   --accent: #acdcff;
   --radius: 0px;
-  --border: 2px solid var(--fg);
+
+  /* “Gammel versjon”-gutter for innhold (midt-teksten) */
+  --gutter-main: 64px;
+
+  /* Header skal være ca 1 cm (≈38px) mindre enn før */
+  --gutter-header: calc(var(--gutter-main) - 38px);
+
+  /* Litt luft over header-navn */
+  --header-top: 18px;
 }
 
 /* Kantete overalt */
@@ -22,19 +30,15 @@ body,
   color: var(--fg) !important;
 }
 
-/* Typografi i innhold */
-.md-typeset {
-  color: var(--fg) !important;
-}
+/* ---------- INNHOLD / TYPO ---------- */
+.md-typeset { color: var(--fg) !important; }
 
-/* Overskrifter i innhold: store, hvite, “kantete” */
 .md-typeset h1, .md-typeset h2, .md-typeset h3 {
   color: var(--fg) !important;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
-/* Lenker: hvit + blå hover */
 .md-typeset a {
   color: var(--fg) !important;
   text-decoration: underline;
@@ -42,484 +46,133 @@ body,
   text-decoration-thickness: 2px;
 }
 .md-typeset a:hover {
-  background: var(--accent);
-  color: #000 !important;
+  color: var(--accent) !important;
 }
 
-/* ---------- HEADER (toppen) ---------- */
-.md-header {
-  background: var(--bg) !important;
-  border-bottom: var(--border);
-}
-
-/* Gjør “ELISE DOBBE” stor, hvit */
-.md-header__title,
-.md-header__title .md-header__topic {
-  color: var(--fg) !important;
-  font-weight: 394;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 30px;
-}
-
-/* ---------- TOPP-MENY (tabs) ---------- */
-.md-tabs {
-  background: var(--bg) !important;
-  border-bottom: var(--border);
-}
-
-/* Flytt tabs til høyre (slik som referansen din) */
-.md-tabs__list {
-  justify-content: flex-end !important;
-}
-
-/* Tab-tekst hvit, tydelig */
-.md-tabs__link {
-  color: var(--fg) !important;
-  opacity: 1 !important;
-  font-size: 18px;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  padding: 18px 14px;
-}
-
-/* Active/hover: blå bakgrunn */
-.md-tabs__link--active,
-.md-tabs__link:hover {
-  background: var(--accent) !important;
-  color: #000 !important;
-}
-
-/* ---------- Fjern venstremeny helt (du vil ikke ha den) ---------- */
+/* Fjern sidebars (du vil ikke ha venstremeny) */
 .md-sidebar--primary,
 .md-sidebar--secondary {
   display: none !important;
 }
+.md-main__inner { margin-left: 0 !important; }
+
+/* Bredde */
+.md-grid { max-width: 1400px; }
+
+/* INNHOLD padding (midt-teksten) – behold “gammel” look */
 .md-main__inner {
-  margin-left: 0 !important;
+  padding-left: var(--gutter-main) !important;
+  padding-right: var(--gutter-main) !important;
 }
 
-/* Gjør innhold litt mer “cinema”-bredt */
-.md-grid {
-  max-width: 1280px;
-}
-
-/* Optional: litt “ramme”-feeling på bilder/video */
-.md-typeset img,
-.video video {
-  border: var(--border);
-}
-
-
-/* =============================
-   TABS øverst til høyre + Muli
-   ============================= */
-
-/* Fjern hvit strek/linjer under header/tabs */
+/* ---------- HEADER ---------- */
 .md-header,
 .md-tabs {
+  background: var(--bg) !important;
   border-bottom: none !important;
   box-shadow: none !important;
 }
 
-/* Header bakgrunn og tekst (sikre mørk) */
-.md-header {
-  background: var(--bg) !important;
-}
-
-/* Selve tabs-linja */
-.md-tabs {
-  background: var(--bg) !important;
-}
-
-/* Flytt tabs til høyre */
-.md-tabs__list {
-  justify-content: flex-end !important;
-}
-
-/* Tabs-tekst: Muli/Mulish og hvit */
-.md-tabs__link {
-  font-family: var(--font-body) !important;
-  color: var(--fg) !important;
-  opacity: 1 !important;
-  text-transform: none !important;
-  letter-spacing: 0 !important;
-  font-size: 16px;
-}
-
-/* Aktiv / hover */
-.md-tabs__link--active,
-.md-tabs__link:hover {
-  background: var(--accent) !important;
-  color: #000 !important;
-}
-
-/* Hvis hamburger fortsatt vises på desktop:
-   Material viser hamburger i "mobilbreakpoint".
-   Sørg for at du tester i bredt vindu.
-*/
-
-
-/* =============================
-   Footer: mørk + kontaktinfo
-   ============================= */
-
-/* Gjør footeren helt mørk og kantete */
-.md-footer {
-  background: #1e1e1e !important;
-  color: #fdfeff !important;
-  border-top: none !important;
-}
-
-/* Fjern "Made with Material..." (theme credit) */
-.md-footer-meta {
-  display: none !important;
-}
-
-/* Legg inn din egen footer-tekst via pseudo-element */
-.md-footer::before {
-  content: "elisedobbe@gmail.com • +47 452 82 801";
-  display: block;
-  padding: 18px 24px;
-  font-family: var(--font-body) !important;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: #fdfeff;
-}
-
-/* Sørg for at footer-lenker ikke blir rare */
-.md-footer a {
-  color: #fdfeff !important;
-}
-
-/* =========================
-   FIX PACK
-   ========================= */
-
-/* Bruk Mulish (Muli-replacement) i meny/tekst */
-:root{
-  --font-body: "Mulish", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-}
-
-/* 1) Footer: epost og nummer på hver sin linje */
-.md-footer::before {
-  content: "elisedobbe@gmail.com\A+47 452 82 801";
-  white-space: pre;              /* gjør \A til linjeskift */
-  line-height: 1.6;
-}
-
-/* 2) Vis tabs tidligere (ikke først ved mega-fullskjerm)
-   Material bytter til hamburger ved en breakpoint.
-   Vi tvinger tabs til å vises fra 900px og opp (halv skjerm-ish). */
-@media (min-width: 900px) {
-  /* Skjul hamburgerknappen */
-  .md-header__button.md-icon[for="__drawer"] {
-    display: none !important;
-  }
-  /* Sørg for at tabs-linja faktisk vises */
-  .md-tabs {
-    display: block !important;
-  }
-}
-
-/* 5) Når det ER hamburger (smalt vindu): flytt den til høyre */
+/* Header padding: 1 cm mindre enn innhold */
 .md-header__inner {
-  position: relative;
+  max-width: none;
+  padding-left: var(--gutter-header) !important;
+  padding-right: var(--gutter-header) !important;
+  padding-top: var(--header-top) !important;
+  padding-bottom: 12px !important;
+
+  display: flex !important;
+  align-items: flex-end !important; /* baseline-ish */
 }
 
-/* Flytt drawer-knappen (hamburger) til høyre i header */
-.md-header__button.md-icon[for="__drawer"] {
-  position: absolute !important;
-  right: 12px;
-  left: auto !important;
-  margin: 0 !important;
+/* Navnet i header */
+.md-header__title,
+.md-header__topic {
+  color: var(--fg) !important;
+  font-family: "TT Fors", sans-serif;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-/* 3 + 4) Align: navn og tabs på samme høyde, riktig padding venstre/høyre */
-.md-header__inner,
-.md-tabs__inner,
-.md-main__inner {
-  padding-left: 18px !important;   /* “nesten helt i kanten, men luft” */
-  padding-right: 18px !important;
-}
-
-/* Hold navnet helt til venstre i header */
-.md-header__title {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-/* Tabs: helt til høyre og samme topplinje-høyde */
-.md-tabs__list {
-  justify-content: flex-end !important;
-  margin: 0 !important;
-}
-
-/* Juster vertikal alignment på tabs-lenker */
-.md-tabs__link {
-  padding-top: 0.9rem !important;
-  padding-bottom: 0.9rem !important;
-  font-family: var(--font-body) !important;
-}
-
-/* 4) Fjern ikonet som dukker opp til venstre for navnet (logo/mark) */
+/* Fjern evt logo-ikon */
 .md-header__button.md-logo,
 .md-header__button.md-logo * {
   display: none !important;
 }
 
-/* Bonus: gjør at “ELISE DOBBE” ikke hopper pga icon-plass */
-.md-header__title {
-  padding-left: 0 !important;
-}
+/* ---------- TABS (meny til høyre) ---------- */
 
-/* =========================
-   FINAL HEADER/TABS + FOOTER POLISH
-   ========================= */
-
-/* Litt ned og litt til høyre for navnet (bittelitt) */
-.md-header__title {
-  transform: translate(6px, 4px);
-}
-
-/* Tabs: sørg for samme “bunnlinje” som headeren og at de ikke kuttes */
-.md-header__inner,
+/* Tabs-linja skal følge header-gutter (samme høyre/venstre) */
 .md-tabs__inner {
-  align-items: center !important;
-}
-
-.md-tabs {
-  overflow: visible !important;
+  max-width: none;
+  padding-left: var(--gutter-header) !important;
+  padding-right: var(--gutter-header) !important;
 }
 
 .md-tabs__list {
-  align-items: center !important;
+  justify-content: flex-end !important;
 }
 
-/* Ikke la tabs havne for langt ned pga padding */
+/* Selve meny-tekst */
 .md-tabs__link {
-  padding: 0 !important;
-  margin: 0 18px !important;
-  line-height: 1 !important;
-  height: auto !important;
+  color: var(--fg) !important;
+  opacity: 1 !important;
 
-  /* Muli/Mulish på meny */
-  font-family: var(--font-body) !important;
+  font-family: var(--font-body, system-ui, -apple-system, "Segoe UI", Arial, sans-serif) !important;
+  font-size: 16px;
+  letter-spacing: 0.02em;
 
-  /* Ingen “boks” */
+  /* fjern “klikk-boks” */
   background: transparent !important;
+  padding: 0 !important;
+  margin-left: 36px !important;
+  line-height: 1 !important;
 }
 
-/* Hover/active: kun farge (ingen firkant) */
+/* Hover/active = kun blå tekst */
 .md-tabs__link:hover,
 .md-tabs__link--active {
+  color: var(--accent) !important;
   background: transparent !important;
-  color: #acdcff !important;
 }
 
-/* Sørg for at selve teksten ikke blir “cut off” */
-.md-tabs__link span,
-.md-tabs__link {
-  display: inline-block !important;
-  overflow: visible !important;
+/* ---------- RESPONSIVE: tabs tidligere + hamburger til høyre ---------- */
+
+/* Vis tabs fra ca “halv skjerm” og opp */
+@media (min-width: 900px) {
+  .md-header__button.md-icon[for="__drawer"] { display: none !important; }
+  .md-tabs { display: block !important; }
 }
 
-/* Gi litt mer luft til høyre så CV ikke havner utenfor */
-.md-tabs__inner {
-  padding-right: 28px !important;
-}
-
-/* Footer: større linjeavstand + ryddig spacing */
-.md-footer::before {
-  line-height: 1.9 !important;
-  padding: 22px 18px !important;
-}
-
-/* Fjern eventuelle underlinjer/border som kan se ut som streker */
-.md-header,
-.md-tabs {
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-/* =========================
-   HEADER ALIGNMENT (fullskjerm)
-   ========================= */
-
-/* 1) Felles side-margin (samme som innholdet) */
-:root{
-  --gutter: 64px;         /* juster denne hvis du vil litt mer/mindre */
-  --header-top: 14px;     /* mer luft over navnet */
-}
-
-/* Samme padding venstre/høyre for header + tabs + main */
-.md-header__inner,
-.md-tabs__inner,
-.md-main__inner {
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
-}
-
-/* 2) Litt mer luft over navnet (ca 1.5x) */
-.md-header__inner {
-  padding-top: var(--header-top) !important;
-  padding-bottom: 10px !important;
-}
-
-/* Fjern små “dytt” som gjør alignment uforutsigbar */
-.md-header__title {
-  transform: none !important;
+/* Når det ER hamburger (smalt): flytt den til høyre */
+.md-header__inner { position: relative; }
+.md-header__button.md-icon[for="__drawer"] {
+  position: absolute !important;
+  right: var(--gutter-header) !important;
+  left: auto !important;
   margin: 0 !important;
-  padding: 0 !important;
 }
 
-/* 3) Baseline alignment: tabs og navn på samme bunnlinje */
-.md-header__inner,
-.md-tabs__inner {
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-/* Tabs-linja: ingen ekstra padding som skyver teksten */
-.md-tabs__list {
-  margin: 0 !important;
-  padding: 0 !important;
-  align-items: flex-end !important;
-}
-
-/* Menypunkt: null padding, styrt av line-height */
-.md-tabs__link {
-  padding: 0 !important;
-  margin: 0 18px !important;
-  line-height: 1 !important;
-  display: inline-block !important;
-  vertical-align: bottom !important;
-}
-
-/* Sørg for at siste punkt ikke blir kuttet */
-.md-tabs__inner {
-  overflow: visible !important;
-}
-
-/* (valgfritt) litt mer “luft” mellom header og innhold */
-.md-main {
-  padding-top: 10px !important;
-}
-
-/* ====== FORCE SAME LEFT/RIGHT EDGE: header, tabs, content ====== */
-:root{
-  --gutter: 64px; /* velg én verdi, og alt følger den */
-}
-
-/* Header + tabs */
-.md-header__inner,
-.md-tabs__inner {
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
-}
-
-/* Innhold: det er denne som ikke matcher */
-.md-main__inner,
-.md-content,
-.md-content__inner,
-.md-typeset {
-  padding-left: 0 !important;   /* fjern default */
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Sett riktig “kant” på selve innholdsblokka */
-.md-content__inner {
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
-}
-
-/* (Valgfritt) hvis du vil at hele siden skal være litt “bredere” */
-.md-grid { max-width: 1400px !important; }
-
-/* =========================
-   HEADER – STRAM OG LINJERT
-   ========================= */
-
-.md-header {
-  background-color: #1e1e1e;
-}
-
-/* FJERN Material sin default gutter */
-.md-header__inner {
-  max-width: none;
-  padding-left: 3rem;   /* ← JUSTER DENNE */
-  padding-right: 3rem;  /* ← OG DENNE */
-  padding-top: 1.2rem;  /* litt mer luft over */
-  padding-bottom: 0.8rem;
-  display: flex;
-  align-items: flex-end; /* ← BUNN-LINJER LOGO + MENY */
-}
-
-/* Logo / navn */
-.md-header__title {
-  margin: 0;
-}
-
-.md-header__topic {
-  font-family: "TT Fors", sans-serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 0.12em;
-  color: #fdfeff;
-}
-
-/* Meny (tabs) */
-.md-tabs {
-  margin-left: auto; /* skyv til høyre */
-}
-
-.md-tabs__list {
-  align-items: flex-end;
-}
-
-.md-tabs__item {
-  margin-left: 2rem;
-}
-
-/* Fjern blå boks rundt aktiv side */
-.md-tabs__link {
-  font-family: "Muli", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #fdfeff;
-}
-
-.md-tabs__link--active,
-.md-tabs__link:hover {
-  color: #acdcff;
-  background: none;
-}
-
-/* Samme venstre kant for header og innhold */
-.md-main__inner {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-
+/* ---------- FOOTER ---------- */
 .md-footer {
-  background-color: #1e1e1e;
-  padding: 2rem 3rem;
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+  border-top: none !important;
 }
 
-.md-footer__inner {
+/* Skjul “Made with Material…” */
+.md-footer-meta { display: none !important; }
+
+/* Kontaktinfo (2 linjer) */
+.md-footer::before {
+  content: "elisedobbe@gmail.com\A+47 452 82 801";
+  white-space: pre;
   display: block;
-}
 
-.md-footer__inner p {
-  margin: 0.4rem 0;
-  line-height: 1.6;
-  font-family: "Muli", sans-serif;
-  font-size: 0.85rem;
-  color: #fdfeff;
+  padding: 22px var(--gutter-main);
+  line-height: 1.9;
+  font-family: var(--font-body, system-ui, -apple-system, "Segoe UI", Arial, sans-serif) !important;
+  font-size: 14px;
+  color: var(--fg);
 }
