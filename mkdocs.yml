@@ -17,6 +17,7 @@ theme:
   # Fjern søkefelt helt
   include_search_page: false
   search_index_only: true
+  custom_dir: docs/overrides
 
 plugins: []
 
