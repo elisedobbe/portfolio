@@ -191,3 +191,84 @@ body,
 .md-footer a {
   color: #fdfeff !important;
 }
+
+/* =========================
+   FIX PACK
+   ========================= */
+
+/* Bruk Mulish (Muli-replacement) i meny/tekst */
+:root{
+  --font-body: "Mulish", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+/* 1) Footer: epost og nummer på hver sin linje */
+.md-footer::before {
+  content: "elisedobbe@gmail.com\A+47 452 82 801";
+  white-space: pre;              /* gjør \A til linjeskift */
+  line-height: 1.6;
+}
+
+/* 2) Vis tabs tidligere (ikke først ved mega-fullskjerm)
+   Material bytter til hamburger ved en breakpoint.
+   Vi tvinger tabs til å vises fra 900px og opp (halv skjerm-ish). */
+@media (min-width: 900px) {
+  /* Skjul hamburgerknappen */
+  .md-header__button.md-icon[for="__drawer"] {
+    display: none !important;
+  }
+  /* Sørg for at tabs-linja faktisk vises */
+  .md-tabs {
+    display: block !important;
+  }
+}
+
+/* 5) Når det ER hamburger (smalt vindu): flytt den til høyre */
+.md-header__inner {
+  position: relative;
+}
+
+/* Flytt drawer-knappen (hamburger) til høyre i header */
+.md-header__button.md-icon[for="__drawer"] {
+  position: absolute !important;
+  right: 12px;
+  left: auto !important;
+  margin: 0 !important;
+}
+
+/* 3 + 4) Align: navn og tabs på samme høyde, riktig padding venstre/høyre */
+.md-header__inner,
+.md-tabs__inner,
+.md-main__inner {
+  padding-left: 18px !important;   /* “nesten helt i kanten, men luft” */
+  padding-right: 18px !important;
+}
+
+/* Hold navnet helt til venstre i header */
+.md-header__title {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Tabs: helt til høyre og samme topplinje-høyde */
+.md-tabs__list {
+  justify-content: flex-end !important;
+  margin: 0 !important;
+}
+
+/* Juster vertikal alignment på tabs-lenker */
+.md-tabs__link {
+  padding-top: 0.9rem !important;
+  padding-bottom: 0.9rem !important;
+  font-family: var(--font-body) !important;
+}
+
+/* 4) Fjern ikonet som dukker opp til venstre for navnet (logo/mark) */
+.md-header__button.md-logo,
+.md-header__button.md-logo * {
+  display: none !important;
+}
+
+/* Bonus: gjør at “ELISE DOBBE” ikke hopper pga icon-plass */
+.md-header__title {
+  padding-left: 0 !important;
+}
