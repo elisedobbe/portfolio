@@ -8,17 +8,16 @@ nav:
 
 theme:
   name: material
-  # Mørk side, ingen toggle, ingen søkefelt
   palette:
     - scheme: slate
-      primary: black
-      accent: blue
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+  # Fjern søkefelt helt
+  include_search_page: false
+  search_index_only: true
 
-# Dette fjerner søk (MkDocs sin built-in search)
 plugins: []
 
 extra_css:
