@@ -57,9 +57,9 @@ body,
 .md-header__title .md-header__topic {
   color: var(--fg) !important;
   font-weight: 450;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 /* ---------- TOPP-MENY (tabs) ---------- */
