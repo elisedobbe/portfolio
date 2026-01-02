@@ -109,3 +109,85 @@ body,
 .video video {
   border: var(--border);
 }
+
+
+/* =============================
+   TABS øverst til høyre + Muli
+   ============================= */
+
+/* Fjern hvit strek/linjer under header/tabs */
+.md-header,
+.md-tabs {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Header bakgrunn og tekst (sikre mørk) */
+.md-header {
+  background: var(--bg) !important;
+}
+
+/* Selve tabs-linja */
+.md-tabs {
+  background: var(--bg) !important;
+}
+
+/* Flytt tabs til høyre */
+.md-tabs__list {
+  justify-content: flex-end !important;
+}
+
+/* Tabs-tekst: Muli/Mulish og hvit */
+.md-tabs__link {
+  font-family: var(--font-body) !important;
+  color: var(--fg) !important;
+  opacity: 1 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 16px;
+}
+
+/* Aktiv / hover */
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  background: var(--accent) !important;
+  color: #000 !important;
+}
+
+/* Hvis hamburger fortsatt vises på desktop:
+   Material viser hamburger i "mobilbreakpoint".
+   Sørg for at du tester i bredt vindu.
+*/
+
+
+/* =============================
+   Footer: mørk + kontaktinfo
+   ============================= */
+
+/* Gjør footeren helt mørk og kantete */
+.md-footer {
+  background: #1e1e1e !important;
+  color: #fdfeff !important;
+  border-top: none !important;
+}
+
+/* Fjern "Made with Material..." (theme credit) */
+.md-footer-meta {
+  display: none !important;
+}
+
+/* Legg inn din egen footer-tekst via pseudo-element */
+.md-footer::before {
+  content: "elisedobbe@gmail.com • +47 452 82 801";
+  display: block;
+  padding: 18px 24px;
+  font-family: var(--font-body) !important;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #fdfeff;
+}
+
+/* Sørg for at footer-lenker ikke blir rare */
+.md-footer a {
+  color: #fdfeff !important;
+}
