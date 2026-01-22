@@ -253,3 +253,23 @@ body,
   display: none !important;
 }
 
+/* =========================
+   FORCE FONTS (FINAL)
+   ========================= */
+
+/* Header-navn (site_name) skal ALLTID være TT Fors */
+.md-header__title,
+.md-header__title .md-header__topic,
+.md-header__title .md-header__topic span,
+.md-header__topic {
+  font-family: "TT Fors" !important;
+  font-weight: 400 !important;
+}
+
+/* Meny (tabs) + innhold skal være Muli */
+.md-tabs__link,
+.md-typeset,
+.md-typeset * {
+  font-family: "Muli" !important;
+  font-weight: 400 !important;
+}
