@@ -34,16 +34,40 @@
   font-display: swap;
 }
 
-/* Bruk TT Fors konsekvent */
-body,
-.md-typeset,
-.md-header,
+/* =========================
+   MULI – font load
+   ========================= */
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/muli/Muli-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/muli/Muli-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 .md-header__title,
-.md-header__topic,
-.md-tabs__link {
-  font-family: "TT Fors", system-ui, -apple-system, sans-serif !important;
+.md-header__topic {
+  font-family: "TT Fors" !important;
   font-weight: 400 !important;
 }
+body,
+.md-typeset,
+.md-tabs__link,
+.md-footer {
+  font-family: "Muli" !important;
+  font-weight: 400 !important;
+}
+
+
 
 /* =========================================================
    Elise Dobbe – Dark / clean / kantete
