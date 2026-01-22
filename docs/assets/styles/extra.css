@@ -1,15 +1,22 @@
 /* =========================
-   TT FORS – font load
+   FONT LOADS (TT Fors + Muli)
    ========================= */
 
+/* TT Fors (filnavn må matche 100%) */
 @font-face {
   font-family: "TT Fors";
-  src: url("../fonts/tt-fors/tt-fors1.ttf") format("truetype");
-  font-weight: 700; /* tykkest */
+  src: url("../fonts/tt-fors/tt-fors4.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: "TT Fors";
+  src: url("../fonts/tt-fors/tt-fors3.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "TT Fors";
   src: url("../fonts/tt-fors/tt-fors2.ttf") format("truetype");
@@ -17,35 +24,15 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "TT Fors";
-  src: url("../fonts/tt-fors/tt-fors3.ttf") format("truetype");
-  font-weight: 400; /* NORMAL */
+  src: url("../fonts/tt-fors/tt-fors1.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "TT Fors";
-  src: url("../fonts/tt-fors/tt-fors4.ttf") format("truetype");
-  font-weight: 300; /* tynnest */
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   MULI – font load
-   ========================= */
-
-@font-face {
-  font-family: "Muli";
-  src: url("../fonts/muli/Muli-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Muli (filnavn fra bildet ditt) */
 @font-face {
   font-family: "Muli";
   src: url("../fonts/muli/Muli-Regular.ttf") format("truetype");
@@ -53,20 +40,46 @@
   font-style: normal;
   font-display: swap;
 }
-
-.md-header__title,
-.md-header__topic {
-  font-family: "TT Fors" !important;
-  font-weight: 400 !important;
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/muli/Muli-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/muli/Muli-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/muli/Muli-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Brødtekst (alt innhold) = Muli */
 body,
 .md-typeset,
-.md-tabs__link,
-.md-footer {
+.md-content,
+.md-content__inner {
   font-family: "Muli" !important;
   font-weight: 400 !important;
 }
 
+/* Header-navn + store overskrifter = TT Fors */
+.md-header__topic,
+.md-header__title,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "TT Fors" !important;
+  font-weight: 400 !important; /* samme tykkelse som midt-overskriften */
+}
 
 
 /* =========================================================
