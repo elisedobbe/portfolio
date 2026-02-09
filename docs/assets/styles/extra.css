@@ -373,7 +373,56 @@ body,
 .md-tabs__inner .md-tabs__list{
   transform: translateY(-2px) !important;
 }
+/* =========================
+   DESKTOP: Tabs på samme linje som header-tittel
+   (baseline-align: bunnen av tekstlinjene)
+   ========================= */
 
-/* DEBUG: skal være synlig hvis CSS lastes */
-.md-tabs { outline: 4px solid hotpink !important; }
-.md-header { outline: 4px solid lime !important; }
+@media (min-width: 900px) {
+
+  /* Gjør header til "ankeret" vi kan legge tabs oppå */
+  .md-header {
+    position: relative !important;
+  }
+
+  /* Legg tabs opp i header-raden (samme toppområde) */
+  .md-tabs {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    z-index: 5 !important;
+  }
+
+  /* Tabs-innholdet får samme padding som header, og alignes til bunn */
+  .md-tabs__inner {
+    max-width: none !important;
+
+    /* Bruk de samme variablene du allerede har i :root */
+    padding-left: var(--gutter-header) !important;
+    padding-right: var(--gutter-header) !important;
+    padding-top: var(--header-top) !important;
+    padding-bottom: 12px !important;
+
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+  }
+
+  /* Sørg for at selve listen og linkene også bunn-liner */
+  .md-tabs__list {
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+
+  .md-tabs__link {
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin-left: 64px !important; /* juster om du vil ha mer/mindre luft mellom menypunktene */
+  }
+}
