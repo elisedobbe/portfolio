@@ -373,3 +373,7 @@ body,
 .md-tabs__inner .md-tabs__list{
   transform: translateY(-2px) !important;
 }
+
+/* DEBUG: skal være synlig hvis CSS lastes */
+.md-tabs { outline: 4px solid hotpink !important; }
+.md-header { outline: 4px solid lime !important; }
