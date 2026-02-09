@@ -389,8 +389,8 @@ body,
   .md-tabs {
     position: absolute !important;
     top: 45px !important;
-    left: 0 !important;
-    right: 0 !important;
+    left: var(--gutter) !important;
+    right: var(--gutter) !important;
 
     background: transparent !important;
     border-bottom: none !important;
