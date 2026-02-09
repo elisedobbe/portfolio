@@ -80,10 +80,10 @@
   --accent: #acdcff;
 
   /* Justér kun disse to hvis du vil */
-  --gutter: 56px;       /* innrykk venstre/høyre (header + tabs + innhold + footer) */
+  --gutter: 43px;       /* innrykk venstre/høyre (header + tabs + innhold + footer) */
   --header-top: 22px;   /* luft over header-navn */
 
-  --tabs-gap: 64px;     /* avstand mellom meny-punktene */
+  --tabs-gap: 50px;     /* avstand mellom meny-punktene */
   --radius: 0px;
 }
 
