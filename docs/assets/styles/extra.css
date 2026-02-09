@@ -330,3 +330,6 @@ body,
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* Flytt menyen 2px opp */
+.md-header__inner .md-tabs { transform: translateY(-2px); }
