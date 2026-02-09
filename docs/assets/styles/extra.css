@@ -368,3 +368,8 @@ body,
 .md-tabs{
   transform: translateY(-2px) !important;
 }
+
+/* Flytt selve lista (enda mer robust) */
+.md-tabs__inner .md-tabs__list{
+  transform: translateY(-2px) !important;
+}
