@@ -333,3 +333,38 @@ body,
 
 /* Flytt menyen 2px opp */
 .md-header__inner .md-tabs { transform: translateY(-2px); }
+
+
+/* ===== FORCE ALIGN: header title + tabs baseline ===== */
+
+/* Sørg for at header-raden er flex */
+.md-header__inner{
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Tabs i Material ligger vanligvis UNDER header, ikke inni.
+   Derfor må vi style .md-tabs__inner (ikke .md-header__inner .md-tabs) */
+.md-tabs__inner{
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Meny til høyre */
+.md-tabs__list{
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+}
+
+/* Fjern “dytt” på lenker */
+.md-tabs__link{
+  line-height: 1 !important;
+  padding: 0 !important;
+  margin: 0 0 0 36px !important; /* behold spacing hvis du vil */
+}
+
+/* Flytt hele tabs-linja litt opp/ned (ENDRE tallet ved behov) */
+.md-tabs{
+  transform: translateY(-2px) !important;
+}
