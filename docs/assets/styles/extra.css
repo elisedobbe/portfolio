@@ -426,3 +426,26 @@ body,
     margin-left: 64px !important; /* juster om du vil ha mer/mindre luft mellom menypunktene */
   }
 }
+
+/* ===== FORCE SAME EDGE PADDING (OVERRIDE) ===== */
+:root{
+  --edge: 88px; /* ← øk / senk her */
+}
+
+/* Samme luft venstre/høyre for: header + tabs + innhold + footer */
+.md-header__inner,
+.md-tabs__inner,
+.md-main__inner{
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
+}
+
+.md-footer::before{
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
+}
+
+/* Hvis tabs ligger “klemt” helt ut mot høyre pga posisjonering */
+.md-tabs{
+  padding-right: 0 !important;
+}
