@@ -7,14 +7,21 @@
    ========================================================= */
 
 /* =========================
-   FONT LOADS
+   FONT LOADS (TT Fors + Muli)
    ========================= */
 
 /* TT Fors */
 @font-face {
   font-family: "TT Fors";
-  src: url("../fonts/tt-fors/TT-Fors1.ttf") format("truetype");
-  font-weight: 700;
+  src: url("../fonts/tt-fors/TT-Fors4.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Fors";
+  src: url("../fonts/tt-fors/TT-Fors3.ttf") format("truetype");
+  font-weight: 500; /* normal */
   font-style: normal;
   font-display: swap;
 }
@@ -27,27 +34,13 @@
 }
 @font-face {
   font-family: "TT Fors";
-  src: url("../fonts/tt-fors/TT-Fors3.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "TT Fors";
-  src: url("../fonts/tt-fors/TT-Fors4.ttf") format("truetype");
-  font-weight: 300;
+  src: url("../fonts/tt-fors/TT-Fors1.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 /* Muli */
-@font-face {
-  font-family: "Muli";
-  src: url("../fonts/muli/Muli-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 @font-face {
   font-family: "Muli";
   src: url("../fonts/muli/Muli-Light.ttf") format("truetype");
@@ -57,9 +50,9 @@
 }
 @font-face {
   font-family: "Muli";
-  src: url("../fonts/muli/Muli-Italic.ttf") format("truetype");
+  src: url("../fonts/muli/Muli-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
@@ -69,9 +62,16 @@
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/muli/Muli-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 /* =========================
-   VARIABLES (ONE SOURCE OF TRUTH)
+   VARIABLES
    ========================= */
 
 :root{
@@ -79,10 +79,11 @@
   --fg: #fdfeff;
   --accent: #acdcff;
 
-  --gutter: 45px;      /* ✅ 45px luft på begge sider */
-  --header-top: 22px;  /* luft over header-navn */
-  --tabs-gap: 50px;    /* avstand mellom Projects / About / CV */
+  /* Justér kun disse to hvis du vil */
+  --gutter: 43px;       /* innrykk venstre/høyre (header + tabs + innhold + footer) */
+  --header-top: 22px;   /* luft over header-navn */
 
+  --tabs-gap: 50px;     /* avstand mellom meny-punktene */
   --radius: 0px;
 }
 
@@ -101,63 +102,20 @@ body,
 }
 
 /* =========================
-   REMOVE SIDEBARS
-   ========================= */
-
-.md-sidebar--primary,
-.md-sidebar--secondary {
-  display: none !important;
-}
-
-/* =========================
-   GRID / PADDING (45px everywhere)
-   ========================= */
-
-.md-header__inner,
-.md-tabs__inner,
-.md-main__inner {
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
-  max-width: none !important;
-}
-
-.md-footer::before{
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
-}
-
-/* Ikke la Material legge ekstra “indre padding” i content */
-.md-content,
-.md-content__inner,
-.md-typeset {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Main-inner */
-.md-main__inner{
-  margin-left: 0 !important;
-}
-
-/* Breddelås (valgfritt) */
-.md-grid { max-width: 1400px !important; }
-
-/* =========================
-   TYPOGRAPHY
+   TYPOGRAPHY (only TT Fors + Muli)
    ========================= */
 
 /* Brødtekst = Muli */
 body,
 .md-typeset,
 .md-content,
-.md-content__inner,
-.md-typeset * {
+.md-content__inner {
   font-family: "Muli" !important;
   font-weight: 400 !important;
   color: var(--fg) !important;
 }
 
-/* Headings = TT Fors */
+/* Headings = TT Fors (ikke fet) */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
@@ -180,6 +138,33 @@ body,
 }
 
 /* =========================
+   LAYOUT: remove sidebars
+   ========================= */
+
+.md-sidebar--primary,
+.md-sidebar--secondary {
+  display: none !important;
+}
+.md-main__inner {
+  margin-left: 0 !important;
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
+}
+
+/* Breddelås */
+.md-grid { max-width: 1400px !important; }
+
+/* Fjern ekstra innrykk Material legger på innhold */
+.md-content,
+.md-content__inner,
+.md-typeset {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* =========================
    HEADER
    ========================= */
 
@@ -190,10 +175,14 @@ body,
   box-shadow: none !important;
 }
 
-/* Header spacing */
-.md-header__inner{
+/* Header grid */
+.md-header__inner {
+  max-width: none !important;
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
   padding-top: var(--header-top) !important;
   padding-bottom: 14px !important;
+
   display: flex !important;
   align-items: flex-end !important;
 }
@@ -204,30 +193,32 @@ body,
   display: none !important;
 }
 
-/* Header-navn = TT Fors */
+/* Header-navn = TT Fors, normal tykkelse */
 .md-header__title,
 .md-header__title .md-header__topic,
 .md-header__topic {
   font-family: "TT Fors" !important;
   font-weight: 400 !important;
   color: var(--fg) !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   font-size: 30px !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 /* =========================
-   TABS (TOP MENU)
+   TABS (top menu)
    ========================= */
 
-.md-tabs__inner{
+.md-tabs__inner {
+  max-width: none !important;
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
   overflow: visible !important;
 }
 
-/* Menyen til høyre */
-.md-tabs__list{
+.md-tabs__list {
   justify-content: flex-end !important;
   align-items: flex-end !important;
   margin: 0 !important;
@@ -235,7 +226,7 @@ body,
 }
 
 /* Menytekst = Muli */
-.md-tabs__link{
+.md-tabs__link {
   font-family: "Muli" !important;
   font-weight: 400 !important;
 
@@ -247,11 +238,7 @@ body,
 
   background: transparent !important;
   padding: 0 !important;
-
-  /* spacing mellom items */
   margin-left: var(--tabs-gap) !important;
-
-  /* baseline-ish */
   line-height: 1 !important;
 }
 
@@ -262,22 +249,23 @@ body,
   background: transparent !important;
 }
 
-/* Skjul Home-tab (hvis Home ligger i nav) */
+/* Skjul Home-tabben (hvis Home står i nav) */
 .md-tabs__item:first-child {
   display: none !important;
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE: tabs tidligere + hamburger til høyre
    ========================= */
 
-/* Vis tabs fra “halv skjerm-ish” */
 @media (min-width: 900px) {
+  /* skjul hamburger */
   .md-header__button.md-icon[for="__drawer"] { display: none !important; }
+  /* sikre at tabs vises */
   .md-tabs { display: block !important; }
 }
 
-/* Når det ER hamburger (smalt): flytt til høyre */
+/* Når det er hamburger (smalt): flytt til høyre */
 .md-header__inner { position: relative; }
 .md-header__button.md-icon[for="__drawer"] {
   position: absolute !important;
@@ -287,7 +275,7 @@ body,
 }
 
 /* =========================
-   FOOTER
+   FOOTER (contact)
    ========================= */
 
 .md-footer {
@@ -305,8 +293,7 @@ body,
   white-space: pre;
   display: block;
 
-  padding-top: 22px !important;
-  padding-bottom: 22px !important;
+  padding: 22px var(--gutter) !important;
   line-height: 1.9 !important;
 
   font-family: "Muli" !important;
@@ -314,4 +301,151 @@ body,
   font-size: 14px !important;
 
   color: var(--fg) !important;
+}
+
+/* --- Align meny-tekst med header-tittel (samme bunnlinje) --- */
+
+/* Gjør header-innholdet til en flex-rad og align til bunn */
+.md-header__inner {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Tabs ligger inni headeren når navigation.tabs er på.
+   Gi tabs-container samme bunnlinje */
+.md-header__inner .md-tabs {
+  margin-left: auto !important;
+  align-self: flex-end !important;
+}
+
+/* Selve tab-lista: align items til bunn */
+.md-header__inner .md-tabs__list {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Fjern “dytt” som kan gjøre at tabs havner litt høyere/lavere */
+.md-header__inner .md-tabs__link {
+  line-height: 1 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Flytt menyen 2px opp */
+.md-header__inner .md-tabs { transform: translateY(-2px); }
+
+
+/* ===== FORCE ALIGN: header title + tabs baseline ===== */
+
+/* Sørg for at header-raden er flex */
+.md-header__inner{
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Tabs i Material ligger vanligvis UNDER header, ikke inni.
+   Derfor må vi style .md-tabs__inner (ikke .md-header__inner .md-tabs) */
+.md-tabs__inner{
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Meny til høyre */
+.md-tabs__list{
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+}
+
+/* Fjern “dytt” på lenker */
+.md-tabs__link{
+  line-height: 1 !important;
+  padding: 0 !important;
+  margin: 0 0 0 36px !important; /* behold spacing hvis du vil */
+}
+
+/* Flytt hele tabs-linja litt opp/ned (ENDRE tallet ved behov) */
+.md-tabs{
+  transform: translateY(-2px) !important;
+}
+
+/* Flytt selve lista (enda mer robust) */
+.md-tabs__inner .md-tabs__list{
+  transform: translateY(-2px) !important;
+}
+/* =========================
+   DESKTOP: Tabs på samme linje som header-tittel
+   (baseline-align: bunnen av tekstlinjene)
+   ========================= */
+
+@media (min-width: 900px) {
+
+  /* Gjør header til "ankeret" vi kan legge tabs oppå */
+  .md-header {
+    position: relative !important;
+  }
+
+  /* Legg tabs opp i header-raden (samme toppområde) */
+  .md-tabs {
+    position: absolute !important;
+    top: 45px !important;
+    left: var(--gutter) !important;
+    right: var(--gutter) !important;
+
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    z-index: 5 !important;
+  }
+
+  /* Tabs-innholdet får samme padding som header, og alignes til bunn */
+  .md-tabs__inner {
+    max-width: none !important;
+
+    /* Bruk de samme variablene du allerede har i :root */
+    padding-left: var(--gutter-header) !important;
+    padding-right: var(--gutter-header) !important;
+    padding-top: var(--header-top) !important;
+    padding-bottom: 12px !important;
+
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+  }
+
+  /* Sørg for at selve listen og linkene også bunn-liner */
+  .md-tabs__list {
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+
+  .md-tabs__link {
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin-left: 64px !important; /* juster om du vil ha mer/mindre luft mellom menypunktene */
+  }
+}
+
+/* ===== FORCE SAME EDGE PADDING (OVERRIDE) ===== */
+:root{
+  --edge: 88px; /* ← øk / senk her */
+}
+
+/* Samme luft venstre/høyre for: header + tabs + innhold + footer */
+.md-header__inner,
+.md-tabs__inner,
+.md-main__inner{
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
+}
+
+.md-footer::before{
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
+}
+
+/* Hvis tabs ligger “klemt” helt ut mot høyre pga posisjonering */
+.md-tabs{
+  padding-right: 0 !important;
 }
