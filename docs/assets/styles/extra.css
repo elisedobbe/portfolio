@@ -302,3 +302,31 @@ body,
 
   color: var(--fg) !important;
 }
+
+/* --- Align meny-tekst med header-tittel (samme bunnlinje) --- */
+
+/* Gjør header-innholdet til en flex-rad og align til bunn */
+.md-header__inner {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Tabs ligger inni headeren når navigation.tabs er på.
+   Gi tabs-container samme bunnlinje */
+.md-header__inner .md-tabs {
+  margin-left: auto !important;
+  align-self: flex-end !important;
+}
+
+/* Selve tab-lista: align items til bunn */
+.md-header__inner .md-tabs__list {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Fjern “dytt” som kan gjøre at tabs havner litt høyere/lavere */
+.md-header__inner .md-tabs__link {
+  line-height: 1 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
