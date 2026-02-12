@@ -449,3 +449,15 @@ body,
 .md-tabs{
   padding-right: 0 !important;
 }
+
+/* Gjør site_name (ELISE DOBBE) klikkbar tilbake til forsiden */
+.md-header__topic,
+.md-header__title {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+/* Valgfritt: subtil hover (kan fjernes hvis du vil ha helt clean) */
+.md-header__topic:hover {
+  opacity: 0.8;
+}
