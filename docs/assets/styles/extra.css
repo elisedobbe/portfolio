@@ -461,3 +461,7 @@ body,
 .md-header__topic:hover {
   opacity: 0.8;
 }
+
+.md-header__topic {
+  text-decoration: none !important;
+}
