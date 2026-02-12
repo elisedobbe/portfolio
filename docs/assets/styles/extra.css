@@ -465,3 +465,32 @@ body,
 .md-header__topic {
   text-decoration: none !important;
 }
+
+
+/* =========================================================
+   HEADER: hele venstre del skal være klikkbar (Home)
+   ========================================================= */
+
+/* Sørg for at headeren kan inneholde en klikkbar overlay */
+.md-header__inner {
+  position: relative;
+}
+
+/* Gjør site_name-lenken til et "overlay" over venstre header */
+.md-header__title > a,
+.md-header__topic {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+/* Fallback: hvis Material wrapper teksten rart */
+.md-header__title {
+  pointer-events: none;
+}
+
+.md-header__title * {
+  pointer-events: auto;
+}
