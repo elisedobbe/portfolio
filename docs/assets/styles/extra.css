@@ -486,11 +486,38 @@ body,
   text-decoration: none !important;
 }
 
-/* Fallback: hvis Material wrapper teksten rart */
-.md-header__title {
-  pointer-events: none;
-}
-
 .md-header__title * {
   pointer-events: auto;
+}
+/* =========================================================
+   HEADER: IKKE vis sidetittel (Projects/About osv) under site_name
+   ========================================================= */
+
+/* Skjul den ekstra "page title"-linjen i headeren */
+.md-header__title .md-header__topic + .md-header__topic {
+  display: none !important;
+}
+
+/* =========================================================
+   HEADER: gjør site_name klikkbar igjen (unngå CSS som blokkerer)
+   ========================================================= */
+
+/* Sørg for at header-lenken faktisk kan klikkes */
+.md-header__title a {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 20;
+  text-decoration: none !important;
+}
+
+/* Viktig: ikke la noe usynlig "tabs-lag" ligge oppå headeren */
+.md-tabs {
+  position: static !important;
+  transform: none !important;
+  z-index: auto !important;
+}
+
+/* Hvis du tidligere har satt pointer-events: none på .md-header__title */
+.md-header__title {
+  pointer-events: auto !important;
 }
