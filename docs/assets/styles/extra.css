@@ -694,7 +694,7 @@ body,
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  background-image: url("../images/about/IMG_4795_2.JPG");
+  background-image: url("../images/about/ELISE.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -809,7 +809,7 @@ body:has(.about-hero) .md-main__inner{
   width: 100vw;
   margin-left: calc(50% - 50vw);
   height: 520px;                 /* juster høyden om du vil */
-  background-image: url("../images/IMG_4795_2.JPG");
+  background-image: url("../images/ELISE.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
