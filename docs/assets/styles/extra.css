@@ -689,3 +689,118 @@ body,
     gap: 36px;
   }
 }
+
+/* =========================================================
+   ABOUT PAGE – FULL BLEED HERO + HEADER GRADIENT (FIGMA-STYLE)
+   Requires:
+   - about.md contains: <div class="about-hero"></div> at top
+   - image at: docs/assets/images/about/IMG_4795_2.jpg
+   ========================================================= */
+
+:root{
+  --edge: 45px;                 /* ønsket luft i kantene */
+  --hero-height: 520px;         /* juster hvis du vil høyere/lavere bilde */
+  --header-gradient-height: 190px; /* høyden på gradientfeltet */
+}
+
+/* 1) Full-bleed hero (100vw) */
+.about-hero{
+  position: relative;
+  height: var(--hero-height);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background-image: url("../images/about/IMG_4795_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 2) Gradient oppå bildet (som rektangelet ditt) */
+.about-hero::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--header-gradient-height);
+
+  /* “Rectangle 10”-følelse: transparent -> 76% -> 100% */
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 30, 30, 0) 0%,
+    rgba(30, 30, 30, 0.76) 50%,
+    rgba(30, 30, 30, 1) 100%
+  );
+  pointer-events: none;
+}
+
+/* 3) Kun på sider som har .about-hero: gjør header/tabs transparente og legg de over hero */
+body:has(.about-hero) .md-header,
+body:has(.about-hero) .md-tabs{
+  background: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+/* Sørg for at header/tabs ligger over bildet */
+body:has(.about-hero) .md-header{
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20 !important;
+}
+
+body:has(.about-hero) .md-tabs{
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 19 !important;
+}
+
+/* 4) 45px kantluft (header + tabs + innhold + footer) */
+body:has(.about-hero) .md-header__inner,
+body:has(.about-hero) .md-tabs__inner,
+body:has(.about-hero) .md-main__inner{
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
+}
+
+/* 5) Innholdsblokka under hero: to kolonner som i mockup */
+.about-section{
+  padding-top: 42px;
+  padding-bottom: 60px;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 72px;
+}
+
+@media (max-width: 900px){
+  .about-grid{
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* Typo for About headings (matcher “ABOUT ME / EDUCATION”) */
+.about-section h2{
+  font-family: "TT Fors" !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+}
+
+.about-section h3{
+  font-family: "TT Fors" !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin: 28px 0 10px 0;
+}
