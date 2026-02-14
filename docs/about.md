@@ -2,7 +2,7 @@
 
 <h1 class="sr-only">About me</h1>
 
-<section class="about-hero" style="background-image: url('assets/images/about-hero.jpg');">
+<section class="about-hero" style="background-image: url('assets/images/IMG_4795 2');">
   <div class="about-hero__gradient"></div>
 </section>
 
