@@ -1,15 +1,3 @@
-/* =========================================================
-   Elise Dobbe – Dark / clean / kantete
-   Base: #1e1e1e, text: #fdfeff, accent: #acdcff
-   Fonts:
-     - TT Fors (header + headings)
-     - Muli (tabs + body)
-   ========================================================= */
-
-/* =========================
-   FONT LOADS (TT Fors + Muli)
-   ========================= */
-
 /* TT Fors */
 @font-face {
   font-family: "TT Fors";
@@ -70,10 +58,6 @@
   font-display: swap;
 }
 
-/* =========================
-   VARIABLES
-   ========================= */
-
 :root{
   --bg: #1e1e1e;
   --fg: #fdfeff;
@@ -87,7 +71,6 @@
   --radius: 0px;
 }
 
-/* Kantete overalt */
 * { border-radius: var(--radius) !important; }
 
 /* =========================
