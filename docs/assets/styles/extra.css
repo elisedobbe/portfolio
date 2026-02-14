@@ -808,3 +808,53 @@ body:has(.about-hero) .md-main__inner{
 .md-header__title .md-header__topic + .md-header__topic {
   display: none !important;
 }
+
+
+/* =========================================================
+   ABOUT PAGE – FULLSCREEN HERO WITH TRANSPARENT HEADER
+   ========================================================= */
+
+/* 1) Fullscreen bilde */
+.about-hero{
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* dekker hele skjermen */
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background-image: url("../images/IMG_4295_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 2) Gjør header + tabs transparente */
+body:has(.about-hero) .md-header,
+body:has(.about-hero) .md-tabs{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 3) Legg headeren over bildet */
+body:has(.about-hero) .md-header{
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50 !important;
+}
+
+body:has(.about-hero) .md-tabs{
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 49 !important;
+}
+
+/* 4) Sørg for at tekst ikke havner bak header */
+body:has(.about-hero) .md-main{
+  margin-top: 100vh;
+}
