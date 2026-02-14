@@ -25,8 +25,7 @@
 
     <div class="about-col">
       <h2>EDUCATION</h2>
-
-      <h3>STUDIES</h3>
+      
       <p><strong>Bachelor’s Degree in Film Production</strong><br>
         Catalyst – Institute for Creative Arts and Technology<br>
         August 2023 – June 2026
