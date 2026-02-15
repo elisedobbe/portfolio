@@ -1,4 +1,6 @@
 <div class="about-hero"></div>
+  <img src="assets/images/ELISE.PNG" alt="">
+</div>
 
 <section class="about-section">
   <div class="about-grid">
