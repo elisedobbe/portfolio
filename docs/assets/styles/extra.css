@@ -1,3 +1,15 @@
+/* =========================================================
+   Elise Dobbe – Dark / clean / kantete
+   Base: #1e1e1e, text: #fdfeff, accent: #acdcff
+   Fonts:
+     - TT Fors (header + headings)
+     - Muli (tabs + body)
+   ========================================================= */
+
+/* =========================
+   FONT LOADS (TT Fors + Muli)
+   ========================= */
+
 /* TT Fors */
 @font-face {
   font-family: "TT Fors";
@@ -9,7 +21,7 @@
 @font-face {
   font-family: "TT Fors";
   src: url("../fonts/tt-fors/TT-Fors3.ttf") format("truetype");
-  font-weight: 500; /* normal */
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -58,16 +70,18 @@
   font-display: swap;
 }
 
+/* =========================
+   VARIABLES
+   ========================= */
+
 :root{
   --bg: #1e1e1e;
   --fg: #fdfeff;
   --accent: #acdcff;
 
-  /* Justér kun disse to hvis du vil */
-  --gutter: 43px;       /* innrykk venstre/høyre (header + tabs + innhold + footer) */
-  --header-top: 22px;   /* luft over header-navn */
-
-  --tabs-gap: 50px;     /* avstand mellom meny-punktene */
+  --edge: 45px;       /* lik luft venstre/høyre overalt */
+  --header-top: 22px; /* luft over "ELISE DOBBE" */
+  --tabs-gap: 50px;   /* avstand mellom menypunkter */
   --radius: 0px;
 }
 
@@ -85,10 +99,10 @@ body,
 }
 
 /* =========================
-   TYPOGRAPHY (only TT Fors + Muli)
+   TYPOGRAPHY
    ========================= */
 
-/* Brødtekst = Muli */
+/* Body = Muli */
 body,
 .md-typeset,
 .md-content,
@@ -98,7 +112,7 @@ body,
   color: var(--fg) !important;
 }
 
-/* Headings = TT Fors (ikke fet) */
+/* Headings = TT Fors */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
@@ -128,16 +142,16 @@ body,
 .md-sidebar--secondary {
   display: none !important;
 }
-.md-main__inner {
-  margin-left: 0 !important;
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
-}
 
-/* Breddelås */
 .md-grid { max-width: 1400px !important; }
 
-/* Fjern ekstra innrykk Material legger på innhold */
+.md-main__inner {
+  margin-left: 0 !important;
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
+}
+
+/* Fjern ekstra innrykk */
 .md-content,
 .md-content__inner,
 .md-typeset {
@@ -148,7 +162,7 @@ body,
 }
 
 /* =========================
-   HEADER
+   HEADER + TABS (global)
    ========================= */
 
 .md-header,
@@ -158,11 +172,11 @@ body,
   box-shadow: none !important;
 }
 
-/* Header grid */
+/* Header inner */
 .md-header__inner {
   max-width: none !important;
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
   padding-top: var(--header-top) !important;
   padding-bottom: 14px !important;
 
@@ -170,13 +184,16 @@ body,
   align-items: flex-end !important;
 }
 
-/* Fjern evt logo-ikon til venstre */
-.md-header__button.md-logo,
-.md-header__button.md-logo * {
-  display: none !important;
+/* Skjul logo-ikon visuelt (men ikke ødelegg layout) */
+.md-header__button.md-logo{
+  opacity: 0 !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
 }
 
-/* Header-navn = TT Fors, normal tykkelse */
+/* Site name */
 .md-header__title,
 .md-header__title .md-header__topic,
 .md-header__topic {
@@ -190,14 +207,16 @@ body,
   padding: 0 !important;
 }
 
-/* =========================
-   TABS (top menu)
-   ========================= */
+/* Skjul sidetittel-linja under site name (About/Projects osv) */
+.md-header__title .md-header__topic + .md-header__topic {
+  display: none !important;
+}
 
+/* Tabs container */
 .md-tabs__inner {
   max-width: none !important;
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
+  padding-left: var(--edge) !important;
+  padding-right: var(--edge) !important;
   overflow: visible !important;
 }
 
@@ -208,11 +227,10 @@ body,
   padding: 0 !important;
 }
 
-/* Menytekst = Muli */
+/* Tabs link */
 .md-tabs__link {
   font-family: "Muli" !important;
   font-weight: 400 !important;
-
   color: var(--fg) !important;
   opacity: 1 !important;
 
@@ -225,36 +243,21 @@ body,
   line-height: 1 !important;
 }
 
-/* Hover/active = kun blå tekst (ingen boks) */
 .md-tabs__link:hover,
 .md-tabs__link--active {
   color: var(--accent) !important;
   background: transparent !important;
 }
 
-/* Skjul Home-tabben (hvis Home står i nav) */
+/* Skjul Home-tabben hvis den ligger først */
 .md-tabs__item:first-child {
   display: none !important;
 }
 
-/* =========================
-   RESPONSIVE: tabs tidligere + hamburger til høyre
-   ========================= */
-
+/* Desktop: skjul hamburger */
 @media (min-width: 900px) {
-  /* skjul hamburger */
   .md-header__button.md-icon[for="__drawer"] { display: none !important; }
-  /* sikre at tabs vises */
   .md-tabs { display: block !important; }
-}
-
-/* Når det er hamburger (smalt): flytt til høyre */
-.md-header__inner { position: relative; }
-.md-header__button.md-icon[for="__drawer"] {
-  position: absolute !important;
-  right: var(--gutter) !important;
-  left: auto !important;
-  margin: 0 !important;
 }
 
 /* =========================
@@ -266,17 +269,14 @@ body,
   color: var(--fg) !important;
   border-top: none !important;
 }
-
-/* Skjul “Made with Material…” */
 .md-footer-meta { display: none !important; }
 
-/* Kontaktinfo (2 linjer) */
 .md-footer::before {
   content: "elise.dobbe@outlook.com\A+47 452 82 801\Alinkedin.com/in/elise-k-dobbe/";
   white-space: pre;
   display: block;
 
-  padding: 22px var(--gutter) !important;
+  padding: 22px var(--edge) !important;
   line-height: 1.9 !important;
 
   font-family: "Muli" !important;
@@ -286,550 +286,18 @@ body,
   color: var(--fg) !important;
 }
 
-/* --- Align meny-tekst med header-tittel (samme bunnlinje) --- */
-
-/* Gjør header-innholdet til en flex-rad og align til bunn */
-.md-header__inner {
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-/* Tabs ligger inni headeren når navigation.tabs er på.
-   Gi tabs-container samme bunnlinje */
-.md-header__inner .md-tabs {
-  margin-left: auto !important;
-  align-self: flex-end !important;
-}
-
-/* Selve tab-lista: align items til bunn */
-.md-header__inner .md-tabs__list {
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-/* Fjern “dytt” som kan gjøre at tabs havner litt høyere/lavere */
-.md-header__inner .md-tabs__link {
-  line-height: 1 !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* Flytt menyen 2px opp */
-.md-header__inner .md-tabs { transform: translateY(-2px); }
-
-
-/* ===== FORCE ALIGN: header title + tabs baseline ===== */
-
-/* Sørg for at header-raden er flex */
-.md-header__inner{
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-/* Tabs i Material ligger vanligvis UNDER header, ikke inni.
-   Derfor må vi style .md-tabs__inner (ikke .md-header__inner .md-tabs) */
-.md-tabs__inner{
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-/* Meny til høyre */
-.md-tabs__list{
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-items: flex-end !important;
-}
-
-/* Fjern “dytt” på lenker */
-.md-tabs__link{
-  line-height: 1 !important;
-  padding: 0 !important;
-  margin: 0 0 0 36px !important; /* behold spacing hvis du vil */
-}
-
-/* Flytt hele tabs-linja litt opp/ned (ENDRE tallet ved behov) */
-.md-tabs{
-  transform: translateY(-2px) !important;
-}
-
-/* Flytt selve lista (enda mer robust) */
-.md-tabs__inner .md-tabs__list{
-  transform: translateY(-2px) !important;
-}
-/* =========================
-   DESKTOP: Tabs på samme linje som header-tittel
-   (baseline-align: bunnen av tekstlinjene)
-   ========================= */
-
-@media (min-width: 900px) {
-
-  /* Gjør header til "ankeret" vi kan legge tabs oppå */
-  .md-header {
-    position: relative !important;
-  }
-
-  /* Legg tabs opp i header-raden (samme toppområde) */
-  .md-tabs {
-    position: absolute !important;
-    top: 45px !important;
-    left: var(--gutter) !important;
-    right: var(--gutter) !important;
-
-    background: transparent !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    z-index: 5 !important;
-  }
-
-  /* Tabs-innholdet får samme padding som header, og alignes til bunn */
-  .md-tabs__inner {
-    max-width: none !important;
-
-    /* Bruk de samme variablene du allerede har i :root */
-    padding-left: var(--gutter-header) !important;
-    padding-right: var(--gutter-header) !important;
-    padding-top: var(--header-top) !important;
-    padding-bottom: 12px !important;
-
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: flex-end !important;
-  }
-
-  /* Sørg for at selve listen og linkene også bunn-liner */
-  .md-tabs__list {
-    margin: 0 !important;
-    padding: 0 !important;
-    align-items: flex-end !important;
-  }
-
-  .md-tabs__link {
-    line-height: 1 !important;
-    padding: 0 !important;
-    margin-left: 64px !important; /* juster om du vil ha mer/mindre luft mellom menypunktene */
-  }
-}
-
-/* ===== FORCE SAME EDGE PADDING (OVERRIDE) ===== */
-:root{
-  --edge: 88px; /* ← øk / senk her */
-}
-
-/* Samme luft venstre/høyre for: header + tabs + innhold + footer */
-.md-header__inner,
-.md-tabs__inner,
-.md-main__inner{
-  padding-left: var(--edge) !important;
-  padding-right: var(--edge) !important;
-}
-
-.md-footer::before{
-  padding-left: var(--edge) !important;
-  padding-right: var(--edge) !important;
-}
-
-/* Hvis tabs ligger “klemt” helt ut mot høyre pga posisjonering */
-.md-tabs{
-  padding-right: 0 !important;
-}
-
-/* Gjør site_name (ELISE DOBBE) klikkbar tilbake til forsiden */
-.md-header__topic,
-.md-header__title {
-  pointer-events: auto !important;
-  cursor: pointer;
-}
-
-/* Valgfritt: subtil hover (kan fjernes hvis du vil ha helt clean) */
-.md-header__topic:hover {
-  opacity: 0.8;
-}
-
-.md-header__topic {
-  text-decoration: none !important;
-}
-
-
 /* =========================================================
-   HEADER: hele venstre del skal være klikkbar (Home)
+   ABOUT PAGE HERO (ELISE.PNG) – full bleed + helt til topp
+   Forutsetter at about.md har: <div class="about-hero"></div> øverst
+   Bildet ligger her: docs/assets/images/about/ELISE.PNG
    ========================================================= */
 
-/* Sørg for at headeren kan inneholde en klikkbar overlay */
-.md-header__inner {
-  position: relative;
-}
-
-/* Gjør site_name-lenken til et "overlay" over venstre header */
-.md-header__title > a,
-.md-header__topic {
-  position: relative;
-  z-index: 10;
-  pointer-events: auto !important;
-  cursor: pointer;
-  text-decoration: none !important;
-}
-
-.md-header__title * {
-  pointer-events: auto;
-}
-/* =========================================================
-   HEADER: IKKE vis sidetittel (Projects/About osv) under site_name
-   ========================================================= */
-
-/* Skjul den ekstra "page title"-linjen i headeren */
-.md-header__title .md-header__topic + .md-header__topic {
+/* Fjern første H1 på about-siden hvis den dukker opp ("ABOUT") */
+body:has(.about-hero) .md-typeset > h1:first-child {
   display: none !important;
 }
 
-/* =========================================================
-   HEADER: gjør site_name klikkbar igjen (unngå CSS som blokkerer)
-   ========================================================= */
-
-/* Sørg for at header-lenken faktisk kan klikkes */
-.md-header__title a {
-  pointer-events: auto !important;
-  position: relative;
-  z-index: 20;
-  text-decoration: none !important;
-}
-
-/* Viktig: ikke la noe usynlig "tabs-lag" ligge oppå headeren */
-.md-tabs {
-  position: static !important;
-  transform: none !important;
-  z-index: auto !important;
-}
-
-/* Hvis du tidligere har satt pointer-events: none på .md-header__title */
-.md-header__title {
-  pointer-events: auto !important;
-}
-
-/* =========================
-   FINAL LAYOUT (ONE SOURCE OF TRUTH)
-   ========================= */
-
-:root{
-  --gutter: 45px;     /* lik luft venstre/høyre */
-  --header-top: 22px; /* luft over "ELISE DOBBE" */
-  --tabs-gap: 50px;   /* avstand mellom menypunkter */
-}
-
-/* Samme padding overalt */
-.md-header__inner,
-.md-tabs__inner,
-.md-main__inner,
-.md-footer::before{
-  padding-left: var(--gutter) !important;
-  padding-right: var(--gutter) !important;
-}
-
-/* Header: baseline-ish */
-.md-header__inner{
-  max-width: none !important;
-  padding-top: var(--header-top) !important;
-  padding-bottom: 14px !important;
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-/* Tabs: ikke flytt/transform — bare hold dem ryddige */
-.md-tabs__inner{
-  max-width: none !important;
-  overflow: visible !important;
-}
-
-.md-tabs__list{
-  justify-content: flex-end !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Menypunkter */
-.md-tabs__link{
-  margin-left: var(--tabs-gap) !important;
-  padding: 0 !important;
-  background: transparent !important;
-  line-height: 1 !important;
-}
-
-/* IKKE skjul logo-lenken med display:none hvis du vil bruke den som "home"-href.
-   Hvis du vil skjule den visuelt, bruk opacity/width i stedet (se under). */
-.md-header__button.md-logo{
-  opacity: 0 !important;
-  width: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-}
-
-/* =========================
-   ABOUT PAGE (hero + panel)
-   ========================= */
-
-/* Skjul “standard” H1 visuelt, men behold for SEO/struktur */
-.sr-only{
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-/* Full-bleed hero (100% viewport-bredde) */
-.about-hero{
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  height: 64vh;               /* juster hvis du vil ha høyere/lavere */
-  min-height: 420px;
-
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-/* Gradient/overlay i toppen (for synlig header/meny) */
-.about-hero__gradient{
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  /* Øverst sterk, så rolig nedover */
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.35) 20%,
-    rgba(0,0,0,0.00) 55%
-  );
-}
-
-/* Panelet under hero, samme “rektangel”/flate som skissen */
-.about-panel{
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  background: var(--bg);
-  padding: 56px var(--gutter);   /* lik luft som resten av siden */
-}
-
-/* To kolonner */
-.about-grid{
-  display: grid;
-  grid-template-columns: 1.25fr 0.9fr; /* venstre litt bredere */
-  gap: 80px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* Typografi i blokken */
-.about-col h2{
-  font-family: "TT Fors" !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 18px;
-  margin: 0 0 20px 0;
-  color: var(--fg);
-}
-
-.about-col h3{
-  font-family: "Muli" !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 12px;
-  margin: 18px 0 10px 0;
-  color: var(--fg);
-  opacity: 0.9;
-}
-
-.about-col p{
-  margin: 0 0 16px 0;
-  line-height: 1.7;
-  color: var(--fg);
-}
-
-/* Mobil: én kolonne */
-@media (max-width: 900px){
-  .about-hero{
-    height: 52vh;
-    min-height: 320px;
-  }
-
-  .about-panel{
-    padding: 40px var(--gutter);
-  }
-
-  .about-grid{
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-}
-
-/* =========================================================
-   ABOUT PAGE – FULL BLEED HERO + HEADER GRADIENT (FIGMA-STYLE)
-   Requires:
-   - about.md contains: <div class="about-hero"></div> at top
-   - image at: docs/assets/images/about/IMG_4795_2.jpg
-   ========================================================= */
-
-:root{
-  --edge: 45px;                 /* ønsket luft i kantene */
-  --hero-height: 520px;         /* juster hvis du vil høyere/lavere bilde */
-  --header-gradient-height: 190px; /* høyden på gradientfeltet */
-}
-
-/* 1) Full-bleed hero (100vw) */
-.about-hero{
-  position: relative;
-  height: var(--hero-height);
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  background-image: url("../images/about/ELISE.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-
-/* 3) Kun på sider som har .about-hero: gjør header/tabs transparente og legg de over hero */
-body:has(.about-hero) .md-header,
-body:has(.about-hero) .md-tabs{
-  background: transparent !important;
-  box-shadow: none !important;
-  border-bottom: none !important;
-}
-
-/* Sørg for at header/tabs ligger over bildet */
-body:has(.about-hero) .md-header{
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20 !important;
-}
-
-body:has(.about-hero) .md-tabs{
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 19 !important;
-}
-
-/* 4) 45px kantluft (header + tabs + innhold + footer) */
-body:has(.about-hero) .md-header__inner,
-body:has(.about-hero) .md-tabs__inner,
-body:has(.about-hero) .md-main__inner{
-  padding-left: var(--edge) !important;
-  padding-right: var(--edge) !important;
-}
-
-/* 5) Innholdsblokka under hero: to kolonner som i mockup */
-.about-section{
-  padding-top: 42px;
-  padding-bottom: 60px;
-}
-
-.about-grid{
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 72px;
-}
-
-@media (max-width: 900px){
-  .about-grid{
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-}
-
-/* Typo for About headings (matcher “ABOUT ME / EDUCATION”) */
-.about-section h2{
-  font-family: "TT Fors" !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin: 0 0 18px 0;
-}
-
-.about-section h3{
-  font-family: "TT Fors" !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  margin: 28px 0 10px 0;
-}
-
-/* =========================
-   ABOUT HERO (image behind header + gradient)
-   ========================= */
-
-/* 1) Fjern “ABOUT” hvis det fortsatt finnes som første H1 på about-siden */
-.md-typeset > h1:first-child {
-  display: none !important;
-}
-
-/* 2) Gjør header/tabs transparente så bildet kan ligge bak */
-.md-header,
-.md-tabs {
-  background: transparent !important;
-}
-
-/* 3) Hero-bilde full bredde + overlay gradient */
-.about-hero{
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  height: 520px;                 /* juster høyden om du vil */
-  background-image: url("../images/ELISE.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-
-/* Litt avstand mellom hero og teksten under */
-.about-hero + *{
-  margin-top: 36px !important;
-}
-/* Skjul side-tittelen i headeren (viser bare site_name) */
-.md-header__title .md-header__topic + .md-header__topic {
-  display: none !important;
-}
-
-
-/* =========================================================
-   ABOUT PAGE – FULLSCREEN HERO WITH TRANSPARENT HEADER
-   ========================================================= */
-
-/* 1) Fullscreen bilde */
-.about-hero{
-  position: relative;
-  width: 100vw;
-  height: 100vh; /* dekker hele skjermen */
-
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  background-image: url("../images/ELISE.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* 2) Gjør header + tabs transparente */
+/* About: header/tabs skal være gjennomsiktig og ligge oppå bildet */
 body:has(.about-hero) .md-header,
 body:has(.about-hero) .md-tabs{
   background: transparent !important;
@@ -837,77 +305,83 @@ body:has(.about-hero) .md-tabs{
   border: none !important;
 }
 
-/* 3) Legg headeren over bildet */
+/* Legg header/tabs oppå */
 body:has(.about-hero) .md-header{
   position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 50 !important;
 }
-
 body:has(.about-hero) .md-tabs{
   position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 49 !important;
 }
 
-/* 4) Sørg for at tekst ikke havner bak header */
-body:has(.about-hero) .md-main{
-  margin-top: 100vh;
-}
-
-/* =========================================================
-   FIX: Hero skal starte helt øverst (ikke under topbar)
-   ========================================================= */
-body:has(.about-hero) .md-main{
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-body:has(.about-hero) .md-main__inner{
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Fjern den “reserverte” høyden Material legger på header/tabs */
-body:has(.about-hero) .md-container{
-  padding-top: 0 !important;
-}
-
-/* Sørg for at heroen faktisk ligger helt i topp */
-body:has(.about-hero) .about-hero{
-  margin-top: 0 !important;
-}
-
-/* =========================================================
-   ABOUT HERO – force full-bleed + helt opp til topp
-   ========================================================= */
-
-/* Unngå rare 100vw/scrollbar-greier som kan gi stripe på høyre side */
-body:has(.about-hero){
-  overflow-x: hidden !important;
-}
-
-/* Fjern all topp-luft i content-wrapper på about-siden */
+/* Ikke reserver toppplass over hero */
+body:has(.about-hero) .md-container,
+body:has(.about-hero) .md-main,
+body:has(.about-hero) .md-main__inner,
 body:has(.about-hero) .md-content,
 body:has(.about-hero) .md-content__inner{
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
 
-/* Hero: 100% viewport-bredde og helt opp */
+/* Safari/scrollbar-glippe fix */
+html, body { overflow-x: hidden !important; }
+
+/* HERO: full bleed uten glipper */
 body:has(.about-hero) .about-hero{
+  /* svw er “safe viewport width” (Safari). vw fallback under */
+  width: 100svw !important;
   width: 100vw !important;
-  max-width: 100vw !important;
 
-  /* full-bleed på begge sider */
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50svw !important;
+  margin-right: -50svw !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
 
-  /* helt opp */
+  height: 72vh !important;     /* juster hvis du vil */
+  min-height: 520px !important;
+
+  background-image: url("../images/about/ELISE.PNG") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
   margin-top: 0 !important;
   padding-top: 0 !important;
+}
+
+/* Mikrofiks hvis det fortsatt blir 1px stripe */
+body:has(.about-hero) .about-hero{
+  transform: translateX(-1px) !important;
+  width: calc(100svw + 2px) !important;
+  width: calc(100vw + 2px) !important;
+}
+
+/* About-innholdet under hero */
+body:has(.about-hero) .about-section{
+  padding-top: 42px;
+  padding-bottom: 60px;
+}
+
+body:has(.about-hero) .about-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 72px;
+}
+
+@media (max-width: 900px){
+  body:has(.about-hero) .about-hero{
+    height: 56vh !important;
+    min-height: 360px !important;
+  }
+  body:has(.about-hero) .about-grid{
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
 }
