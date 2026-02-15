@@ -289,7 +289,7 @@ body,
 /* =========================================================
    ABOUT PAGE HERO (ELISE.PNG) – full bleed + helt til topp
    Forutsetter at about.md har: <div class="about-hero"></div> øverst
-   Bildet ligger her: docs/assets/images/about/ELISE.PNG
+   Bildet ligger her: docs/assets/images/ELISE.PNG
    ========================================================= */
 
 /* Fjern første H1 på about-siden hvis den dukker opp ("ABOUT") */
@@ -332,7 +332,6 @@ html, body { overflow-x: hidden !important; }
 
 /* HERO: full bleed uten glipper */
 body:has(.about-hero) .about-hero{
-  /* svw er “safe viewport width” (Safari). vw fallback under */
   width: 100svw !important;
   width: 100vw !important;
 
@@ -344,10 +343,12 @@ body:has(.about-hero) .about-hero{
   margin-left: -50vw !important;
   margin-right: -50vw !important;
 
-  height: 72vh !important;     /* juster hvis du vil */
+  height: 72vh !important;
   min-height: 520px !important;
 
-  background-image: url("../images/about/ELISE.PNG") !important;
+  /* ✅ RIKTIG PATH (styles → images) */
+  background-image: url("../images/ELISE.PNG") !important;
+
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
