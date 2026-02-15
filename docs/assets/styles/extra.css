@@ -1,16 +1,189 @@
+
+Hei sjef! jeg har prøvd å lage en nettside (portfølje for en venninne som studerer film i berlin) på github. jeg har laget noen skisser i figma, og fått hjelp av chatgpt til å lage noe i github. problemet er at jeg aldri får laget det jeg vil, og hver gangg jeg ber om å endre noe så går vi et skritt fram og to tilbake... kan du hjelpe meg med å rydde opp, og utvikle designet mitt sånn som jeg vil?
+
+7:38 PM
+Hei! Ja, det hjelper jeg deg gjerne med! 😊
+
+Det høres ut som en klassisk situasjon der man mister kontrollen over koden etter mange runder med frem-og-tilbake-redigering. La oss starte fresh og strukturert.
+
+For å hjelpe deg best mulig, trenger jeg litt mer info:
+
+lage et design fra figmaskissene mine, og beholde det som allerede funker fra koden min
+
+7:39 PM
+Perfekt! Del gjerne både GitHub-lenken og Figma-skissene (eller skjermbilder), så tar jeg en grundig titt på begge deler og lager noe som kombinerer det beste fra begge. 🎬
+
+er dette riktig lenke? https://github.com/elisedobbe/portfolio
+
+7:40 PM
+
+Fetched: GitHub - elisedobbe/portfolio
+
+Ja, lenken funker! Jeg ser at repoet bruker MkDocs og har en docs-mappe. La meg hente selve innholdet i filene så jeg skjønner hva som er der.
+
+
+Searched the web
+Ja, lenken er riktig og jeg finner repoet! 🎉 Jeg ser at det er satt opp med MkDocs og har en docs-mappe med innhold.
+
+Dessverre klarer jeg ikke å lese de rå filene direkte — men det er enkelt å fikse. Kan du gjøre ett av disse:
+
+Last opp filene her — zip-fil eller kopier inn koden direkte i chatten
+Del live-siden — hvis GitHub Pages er aktivert, f.eks. elisedobbe.github.io/portfolio
+Og del gjerne Figma-skissene også (skjermbilder fungerer fint) — så har jeg alt jeg trenger for å lage noe skikkelig bra! 🎬
+
+Screenshot 2026-02-15 at 19.41.07.png
+her er skissene til about me siden, og til projects siden. på projectssiden er det kun lagt inn bilder som placeholders. det skal byttes ut bed lenker til youtubevideoer. si ifra når jeg skal laste opp zip av koden
+
+7:43 PM
+Nå ser jeg nettsiden! Den ser faktisk ganske bra ut allerede — mørk bakgrunn, clean typografi, god struktur.
+
+Før du laster opp zip-en, vil jeg forstå hva du vil endre/forbedre:
+
+skjermbildet er deisgnet mitt av to av sidene, har ikke designet til hjemsiden enda
+
+7:45 PM
+Perfekt, da har jeg god oversikt! Last opp zip-filen av koden nå, så setter jeg i gang. 🎬
+
+Mens du gjør det — svar gjerne på de to andre spørsmålene:
+
+embedded med hover-effekt. de skal vise stillbilde. når man hovrer over skal videoen begynne å spille. når man trykker inn så skal man komme itl en gegen side for å se filmen og få mer info om filmen
+
+7:46 PM
+Veldig kult konsept! 🎬 Det blir en fin cinematisk opplevelse. Last opp zip-en når du er klar!
+
+Én siste ting jeg trenger å vite:
+
+egen side per film med fullscreen video øverst, og info under
+
+7:47 PM
+Perfekt! Nå har jeg alt jeg trenger. Last opp zip-en! 🎬
+
+Her er hva vi skal bygge:
+
+Projects-siden: Rutenett med stillbilder → hover starter video → klikk går til filmside
+
+Filmside: Fullscreen video øverst + tittel, rolle, beskrivelse under
+
+About me: Beholde strukturen fra designet ditt, rydde opp spacing/typografi
+
+Klar når du er det! 🚀
+
+
+mkdocs.yml
+23 lines
+
+yml
+
+
+projects.md
+30 lines
+
+md
+
+
+index.md
+4 lines
+
+md
+
+
+about.md
+38 lines
+
+md
+
+
+main.html
+9 lines
+
+html
+
+
+extra.css
+404 lines
+
+css
+
+
+main.html
+9 lines
+
+html
+
+i tillegg til dette har jeg lastet opp fonter og bilder
+
+7:49 PM
+Perfekt, nå har jeg full oversikt over koden! 🎬
+
+Jeg ser hva som finnes og hva som mangler. Jeg leser skill-filen først, så bygger jeg alt:
+
+
+Reading frontend design skill
+Nå setter jeg i gang. Jeg bygger tre filer fra bunnen — index.md, about.md, projects.md — pluss ny CSS som respekterer eksisterende struktur men løfter designet til noe virkelig bra.
+
+
+Created 4 files
+Nå lager jeg en eksempel-filmside (template for hver film):
+
+
+Created a file, ran a command, read a file
+Her er alle 5 filene! 🎬 Her er hva du gjør for å ta dem i bruk:
+
+Erstatt disse filene i repoet ditt:
+
+docs/assets/styles/extra.css → ny CSS
+docs/index.md → ny hjemside med hero-bilde
+docs/about.md → fikset about-side (ingen encoding-bugs)
+docs/projects.md → ny projects-side med hover-video-grid
+docs/camel-hoe.md → eksempel-filmside (kopier denne for hvert prosjekt)
+Tre ting du må fylle inn selv:
+
+YouTube-ID-er — erstatt YOUTUBE_ID_1, YOUTUBE_ID_2 osv. med ekte IDer fra YouTube-lenkene (den 11-tegns koden etter ?v=)
+Thumbnails — legg til stillbilder i docs/assets/images/ og oppdater filnavnene i projects.md
+Filmside per prosjekt — kopier camel-hoe.md og lag tilsvarende for hvert prosjekt, oppdater mkdocs.yml nav med de nye sidene
+Vil du at jeg hjelper med noe av dette? 🚀
+
+Extra
+Code · CSS 
+Index
+Document · MD 
+About
+Document · MD 
+Projects
+Document · MD 
+Camel hoe
+Document · MD 
+nå trenger jeg en liten step by step her. hva skal jeg starte med?
+
+7:52 PM
+Helt fair! La oss ta det ett steg av gangen. Start her:
+
+STEG 1 — Erstatt CSS-filen
+
+Gå til repoet ditt på GitHub og naviger til: docs/assets/styles/extra.css
+
+Klikk på filen → klikk på blyantikon (Edit) øverst til høyre → slett alt som er der → lim inn innholdet fra den nye extra.css jeg lagde → klikk Commit changes.
+
+Gi meg beskjed når det er gjort, så tar vi steg 2! 🎬
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Extra · CSS
+Copy
+
 /* =========================================================
-   Elise Dobbe – Dark / clean / kantete
-   Base: #1e1e1e, text: #fdfeff, accent: #acdcff
-   Fonts:
-     - TT Fors (header + headings)
-     - Muli (tabs + body)
+   ELISE DOBBE — Cinematic / Editorial / Dark
+   Base: #111111, text: #f0ece4, accent: warm off-white
+   Fonts: TT Fors (headings) + Muli (body)
    ========================================================= */
 
 /* =========================
    FONT LOADS (TT Fors + Muli)
    ========================= */
 
-/* TT Fors */
 @font-face {
   font-family: "TT Fors";
   src: url("../fonts/tt-fors/TT-Fors4.ttf") format("truetype");
@@ -21,7 +194,7 @@
 @font-face {
   font-family: "TT Fors";
   src: url("../fonts/tt-fors/TT-Fors3.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -40,7 +213,6 @@
   font-display: swap;
 }
 
-/* Muli */
 @font-face {
   font-family: "Muli";
   src: url("../fonts/muli/Muli-Light.ttf") format("truetype");
@@ -74,21 +246,30 @@
    VARIABLES
    ========================= */
 
-:root{
-  --bg: #1e1e1e;
-  --fg: #fdfeff;
-  --accent: #acdcff;
-
-  --edge: 45px;       /* lik luft venstre/høyre overalt */
-  --header-top: 22px; /* luft over "ELISE DOBBE" */
-  --tabs-gap: 50px;   /* avstand mellom menypunkter */
-  --radius: 0px;
+:root {
+  --bg:        #111111;
+  --bg-card:   #191919;
+  --fg:        #f0ece4;
+  --fg-dim:    #8a8680;
+  --accent:    #f0ece4;
+  --line:      rgba(240,236,228,0.12);
+  --edge:      48px;
+  --header-h:  72px;
+  --ease:      cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-* { border-radius: var(--radius) !important; }
+* {
+  border-radius: 0 !important;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
 
 /* =========================
-   GLOBAL BACKGROUND + TEXT
+   GLOBAL BASE
    ========================= */
 
 body,
@@ -98,44 +279,40 @@ body,
   color: var(--fg) !important;
 }
 
-/* =========================
-   TYPOGRAPHY
-   ========================= */
-
-/* Body = Muli */
 body,
 .md-typeset,
 .md-content,
 .md-content__inner {
-  font-family: "Muli" !important;
-  font-weight: 400 !important;
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
   color: var(--fg) !important;
 }
 
-/* Headings = TT Fors */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
-  font-family: "TT Fors" !important;
-  font-weight: 400 !important;
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
   color: var(--fg) !important;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
 }
 
-/* Links */
 .md-typeset a {
   color: var(--fg) !important;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
 }
 .md-typeset a:hover {
-  color: var(--accent) !important;
+  color: var(--fg) !important;
+  border-color: var(--fg);
 }
 
 /* =========================
-   LAYOUT: remove sidebars
+   REMOVE SIDEBARS
    ========================= */
 
 .md-sidebar--primary,
@@ -143,15 +320,14 @@ body,
   display: none !important;
 }
 
-.md-grid { max-width: 1400px !important; }
+.md-grid { max-width: 1440px !important; }
 
 .md-main__inner {
   margin-left: 0 !important;
-  padding-left: var(--edge) !important;
-  padding-right: var(--edge) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-/* Fjern ekstra innrykk */
 .md-content,
 .md-content__inner,
 .md-typeset {
@@ -159,33 +335,32 @@ body,
   margin-right: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  max-width: none !important;
 }
 
 /* =========================
-   HEADER + TABS (global)
+   HEADER
    ========================= */
 
-.md-header,
-.md-tabs {
+.md-header {
   background: var(--bg) !important;
-  border-bottom: none !important;
+  border-bottom: 1px solid var(--line) !important;
   box-shadow: none !important;
+  height: var(--header-h) !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
 }
 
-/* Header inner */
 .md-header__inner {
   max-width: none !important;
-  padding-left: var(--edge) !important;
-  padding-right: var(--edge) !important;
-  padding-top: var(--header-top) !important;
-  padding-bottom: 14px !important;
-
+  padding: 0 var(--edge) !important;
+  height: var(--header-h) !important;
   display: flex !important;
-  align-items: flex-end !important;
+  align-items: center !important;
 }
 
-/* Skjul logo-ikon visuelt (men ikke ødelegg layout) */
-.md-header__button.md-logo{
+.md-header__button.md-logo {
   opacity: 0 !important;
   width: 0 !important;
   padding: 0 !important;
@@ -193,211 +368,561 @@ body,
   overflow: hidden !important;
 }
 
-/* Site name */
 .md-header__title,
 .md-header__title .md-header__topic,
 .md-header__topic {
-  font-family: "TT Fors" !important;
-  font-weight: 400 !important;
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
   color: var(--fg) !important;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  font-size: 30px !important;
+  font-size: 18px !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Skjul sidetittel-linja under site name (About/Projects osv) */
 .md-header__title .md-header__topic + .md-header__topic {
   display: none !important;
 }
 
-/* Tabs container */
+/* =========================
+   TABS (navigation)
+   ========================= */
+
+.md-tabs {
+  background: var(--bg) !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  height: var(--header-h) !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  width: auto !important;
+  z-index: 200 !important;
+}
+
 .md-tabs__inner {
   max-width: none !important;
-  padding-left: var(--edge) !important;
-  padding-right: var(--edge) !important;
-  overflow: visible !important;
+  padding: 0 var(--edge) !important;
+  height: var(--header-h) !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .md-tabs__list {
-  justify-content: flex-end !important;
-  align-items: flex-end !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 48px !important;
   margin: 0 !important;
   padding: 0 !important;
+  height: 100% !important;
 }
 
-/* Tabs link */
 .md-tabs__link {
-  font-family: "Muli" !important;
-  font-weight: 400 !important;
-  color: var(--fg) !important;
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  color: var(--fg-dim) !important;
   opacity: 1 !important;
-
-  font-size: 16px !important;
-  letter-spacing: 0.02em !important;
-
+  font-size: 13px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
   background: transparent !important;
   padding: 0 !important;
-  margin-left: var(--tabs-gap) !important;
+  margin: 0 !important;
   line-height: 1 !important;
+  transition: color 0.2s var(--ease) !important;
+  border-bottom: none !important;
 }
 
 .md-tabs__link:hover,
 .md-tabs__link--active {
-  color: var(--accent) !important;
+  color: var(--fg) !important;
   background: transparent !important;
+  border-bottom: none !important;
 }
 
-/* Skjul Home-tabben hvis den ligger først */
+/* Hide Home tab */
 .md-tabs__item:first-child {
   display: none !important;
 }
 
-/* Desktop: skjul hamburger */
 @media (min-width: 900px) {
   .md-header__button.md-icon[for="__drawer"] { display: none !important; }
-  .md-tabs { display: block !important; }
+  .md-tabs { display: flex !important; align-items: center !important; }
 }
 
 /* =========================
-   FOOTER (contact)
+   FOOTER
    ========================= */
 
 .md-footer {
   background: var(--bg) !important;
   color: var(--fg) !important;
-  border-top: none !important;
+  border-top: 1px solid var(--line) !important;
 }
 .md-footer-meta { display: none !important; }
 
 .md-footer::before {
-  content: "elise.dobbe@outlook.com\A+47 452 82 801\Alinkedin.com/in/elise-k-dobbe/";
+  content: "elise.dobbe@outlook.com\A+47 452 82 801";
   white-space: pre;
   display: block;
+  padding: 32px var(--edge);
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.04em;
+  line-height: 2;
+  color: var(--fg-dim) !important;
+}
 
-  padding: 22px var(--edge) !important;
-  line-height: 1.9 !important;
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
 
-  font-family: "Muli" !important;
-  font-weight: 400 !important;
-  font-size: 14px !important;
+.home-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: calc(100vh - var(--header-h));
+  overflow: hidden;
+}
 
+.home-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  filter: brightness(0.75);
+  transition: transform 8s ease;
+}
+
+.home-hero:hover img {
+  transform: scale(1.02);
+}
+
+.home-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(17,17,17,0.6) 80%,
+    rgba(17,17,17,0.95) 100%
+  );
+}
+
+.home-hero__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 var(--edge) 52px;
+}
+
+.home-hero__title {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: clamp(36px, 5vw, 72px) !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
   color: var(--fg) !important;
+  margin: 0 0 12px !important;
+  line-height: 1.1 !important;
+}
+
+.home-hero__sub {
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: var(--fg-dim) !important;
+  margin: 0 !important;
 }
 
 /* =========================================================
-   ABOUT PAGE HERO (ELISE.PNG) – full bleed + helt til topp
-   Forutsetter at about.md har: <div class="about-hero"></div> øverst
-   Bildet ligger her: docs/assets/images/ELISE.PNG
+   ABOUT PAGE
    ========================================================= */
 
-/* Fjern første H1 på about-siden hvis den dukker opp ("ABOUT") */
-body:has(.about-hero) .md-typeset > h1:first-child {
-  display: none !important;
-}
-
-/* About: header/tabs skal være gjennomsiktig og ligge oppå bildet */
-body:has(.about-hero) .md-header,
-body:has(.about-hero) .md-tabs{
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* Legg header/tabs oppå */
-body:has(.about-hero) .md-header{
-  position: absolute !important;
-  top: 0; left: 0; right: 0;
-  z-index: 50 !important;
-}
-body:has(.about-hero) .md-tabs{
-  position: absolute !important;
-  top: 0; left: 0; right: 0;
-  z-index: 49 !important;
-}
-
-/* Ikke reserver toppplass over hero */
-body:has(.about-hero) .md-container,
-body:has(.about-hero) .md-main,
-body:has(.about-hero) .md-main__inner,
-body:has(.about-hero) .md-content,
-body:has(.about-hero) .md-content__inner{
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-/* Safari/scrollbar-glippe fix */
-html, body { overflow-x: hidden !important; }
-
-/* =========================================================
-   ABOUT HERO – ingen beskjæring (ekte img), full bredde, helt til topp
-   ========================================================= */
-
-html, body { overflow-x: hidden !important; }
-
-body:has(.about-hero) .md-header,
-body:has(.about-hero) .md-tabs{
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-body:has(.about-hero) .md-header{
-  position: absolute !important;
-  top: 0; left: 0; right: 0;
-  z-index: 50 !important;
-}
-body:has(.about-hero) .md-tabs{
-  position: absolute !important;
-  top: 0; left: 0; right: 0;
-  z-index: 49 !important;
-}
-
-/* Ikke reserver toppplass */
-body:has(.about-hero) .md-container,
-body:has(.about-hero) .md-main,
-body:has(.about-hero) .md-main__inner,
-body:has(.about-hero) .md-content,
-body:has(.about-hero) .md-content__inner{
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-/* Full-bleed wrapper */
-body:has(.about-hero) .about-hero{
+.about-hero {
   width: 100vw !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Selve bildet: behold format, ingen crop, full bredde, helt opp */
-body:has(.about-hero) .about-hero img{
+.about-hero img {
   width: 100vw !important;
   height: auto !important;
   display: block !important;
   margin: 0 !important;
+  filter: brightness(0.85);
 }
 
-/* About-innholdet under hero */
-body:has(.about-hero) .about-section{
-  padding-top: 42px;
-  padding-bottom: 60px;
+.about-section {
+  padding: 64px var(--edge) 80px;
 }
 
-body:has(.about-hero) .about-grid{
+.about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 72px;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 80px;
+  max-width: 1100px;
 }
 
-@media (max-width: 900px){
-  body:has(.about-hero) .about-hero{
-    height: 56vh !important;
-    min-height: 360px !important;
-  }
-  body:has(.about-hero) .about-grid{
+.about-col h2 {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.2em !important;
+  color: var(--fg-dim) !important;
+  text-transform: uppercase !important;
+  margin: 0 0 28px !important;
+  padding-bottom: 14px !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.about-col p {
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  color: var(--fg) !important;
+  margin-bottom: 20px !important;
+}
+
+.about-col strong {
+  font-weight: 400 !important;
+  color: var(--fg) !important;
+}
+
+.about-label {
+  font-family: "TT Fors", sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: var(--fg-dim) !important;
+  margin-bottom: 8px !important;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 48px;
   }
+}
+
+/* =========================================================
+   PROJECTS PAGE
+   ========================================================= */
+
+.projects-header {
+  padding: 52px var(--edge) 40px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0;
+}
+
+.projects-header h1 {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.2em !important;
+  color: var(--fg-dim) !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  margin: 0;
+  width: 100%;
+}
+
+/* Individual project card */
+.project-card {
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 16/9;
+  display: block;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* Thumbnail image (still frame) */
+.project-card__thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease), opacity 0.4s var(--ease);
+  z-index: 1;
+}
+
+/* Embedded iframe (hidden by default, visible on hover) */
+.project-card__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+
+.project-card__video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Overlay gradient */
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17,17,17,0.9) 0%,
+    rgba(17,17,17,0.3) 40%,
+    transparent 70%
+  );
+  z-index: 3;
+  transition: opacity 0.4s var(--ease);
+}
+
+/* Card info */
+.project-card__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px;
+  z-index: 4;
+  transform: translateY(4px);
+  transition: transform 0.4s var(--ease);
+}
+
+.project-card__title {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--fg) !important;
+  margin: 0 0 4px !important;
+  line-height: 1.3 !important;
+}
+
+.project-card__meta {
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.06em !important;
+  color: var(--fg-dim) !important;
+  margin: 0 !important;
+}
+
+/* HOVER STATE */
+.project-card:hover .project-card__thumb {
+  transform: scale(1.04);
+  opacity: 0;
+}
+
+.project-card:hover .project-card__video {
+  opacity: 1;
+}
+
+.project-card:hover .project-card__info {
+  transform: translateY(0);
+}
+
+/* Play indicator */
+.project-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(240,236,228,0.5);
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.project-card__play svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--fg);
+  margin-left: 3px;
+}
+
+.project-card:hover .project-card__play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   FILM PAGE (individual project)
+   ========================================================= */
+
+.film-video {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  background: #000;
+  aspect-ratio: 16/9;
+}
+
+.film-video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+.film-info {
+  padding: 52px var(--edge) 80px;
+  max-width: 820px;
+}
+
+.film-info__label {
+  font-family: "TT Fors", sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: var(--fg-dim) !important;
+  margin: 0 0 20px !important;
+  display: block;
+}
+
+.film-info__title {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: clamp(28px, 3.5vw, 48px) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--fg) !important;
+  margin: 0 0 32px !important;
+  line-height: 1.15 !important;
+}
+
+.film-info__meta {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.film-info__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.film-info__meta-label {
+  font-family: "TT Fors", sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: var(--fg-dim) !important;
+}
+
+.film-info__meta-value {
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  color: var(--fg) !important;
+}
+
+.film-info__desc {
+  font-family: "Muli", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  color: var(--fg) !important;
+  margin: 0 !important;
+}
+
+.film-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "TT Fors", sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: var(--fg-dim) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  margin: 40px var(--edge) 0;
+  display: block;
+  transition: color 0.2s var(--ease);
+}
+
+.film-back:hover {
+  color: var(--fg) !important;
+  border-bottom: none !important;
+}
+
+.film-back::before {
+  content: "← ";
+}
+
+/* Suppress MkDocs default h1 on these pages */
+body:has(.film-video) .md-typeset > h1:first-child,
+body:has(.home-hero) .md-typeset > h1:first-child,
+body:has(.about-hero) .md-typeset > h1:first-child {
+  display: none !important;
+}
+
+/* About page: transparent header over hero */
+body:has(.about-hero) .md-header {
+  background: transparent !important;
+  border-bottom: none !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0;
+}
+
+body:has(.about-hero) .md-tabs {
+  background: transparent !important;
+}
+
+body:has(.about-hero) .md-container,
+body:has(.about-hero) .md-main,
+body:has(.about-hero) .md-main__inner,
+body:has(.about-hero) .md-content,
+body:has(.about-hero) .md-content__inner {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Home page: no top padding */
+body:has(.home-hero) .md-main__inner,
+body:has(.home-hero) .md-content__inner {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
