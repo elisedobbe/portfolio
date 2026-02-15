@@ -330,38 +330,53 @@ body:has(.about-hero) .md-content__inner{
 /* Safari/scrollbar-glippe fix */
 html, body { overflow-x: hidden !important; }
 
-/* HERO: full bleed uten glipper */
-body:has(.about-hero) .about-hero{
-  width: 100svw !important;
-  width: 100vw !important;
+/* =========================================================
+   ABOUT HERO – ingen beskjæring (ekte img), full bredde, helt til topp
+   ========================================================= */
 
-  position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50svw !important;
-  margin-right: -50svw !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
+html, body { overflow-x: hidden !important; }
 
-  height: 72vh !important;
-  min-height: 520px !important;
-
-  /* ✅ RIKTIG PATH (styles → images) */
-  background-image: url("../images/ELISE.PNG") !important;
-
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+body:has(.about-hero) .md-header,
+body:has(.about-hero) .md-tabs{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-/* Mikrofiks hvis det fortsatt blir 1px stripe */
+body:has(.about-hero) .md-header{
+  position: absolute !important;
+  top: 0; left: 0; right: 0;
+  z-index: 50 !important;
+}
+body:has(.about-hero) .md-tabs{
+  position: absolute !important;
+  top: 0; left: 0; right: 0;
+  z-index: 49 !important;
+}
+
+/* Ikke reserver toppplass */
+body:has(.about-hero) .md-container,
+body:has(.about-hero) .md-main,
+body:has(.about-hero) .md-main__inner,
+body:has(.about-hero) .md-content,
+body:has(.about-hero) .md-content__inner{
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Full-bleed wrapper */
 body:has(.about-hero) .about-hero{
-  transform: translateX(-1px) !important;
-  width: calc(100svw + 2px) !important;
-  width: calc(100vw + 2px) !important;
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+}
+
+/* Selve bildet: behold format, ingen crop, full bredde, helt opp */
+body:has(.about-hero) .about-hero img{
+  width: 100vw !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 !important;
 }
 
 /* About-innholdet under hero */
