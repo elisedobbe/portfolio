@@ -1,16 +1,17 @@
-<div class="about-hero"></div>
-  <img src="assets/images/ELISE.PNG" alt="">
+<div class="about-hero">
+  <img src="assets/images/ELISE.PNG" alt="Elise Dobbe on set">
 </div>
 
 <section class="about-section">
   <div class="about-grid">
+
     <div class="about-col">
-      <h2>ABOUT ME</h2>
+      <h2>About me</h2>
       <p>
         My name is Elise, and I am a Gaffer with a strong foundation in both production and visual
         storytelling. As a filmmaker, I focus on character-driven narratives, thoughtful composition,
         and innovative production workflows. I use light and color deliberately to shape emotional
-        tension and guide the audience’s psychological experience.
+        tension and guide the audience's psychological experience.
       </p>
       <p>
         With a background in production, I have worked extensively with psychological horror and
@@ -20,18 +21,20 @@
         of production.
       </p>
       <p>
-        If you’re looking for someone who approachs film with both precision and atmosphere, let’s
+        If you're looking for someone who approaches film with both precision and atmosphere, let's
         create something meaningful together.
       </p>
     </div>
 
     <div class="about-col">
-      <h2>EDUCATION</h2>
-      
-      <p><strong>Bachelor’s Degree in Film Production</strong><br>
-        Catalyst – Institute for Creative Arts and Technology<br>
-        August 2023 – June 2026
+      <h2>Education</h2>
+      <span class="about-label">Studies</span>
+      <p>
+        <strong>Bachelor's Degree in Film Production</strong><br>
+        Catalyst — Institute for Creative Arts and Technology<br>
+        August 2023 — June 2026
       </p>
     </div>
+
   </div>
 </section>
