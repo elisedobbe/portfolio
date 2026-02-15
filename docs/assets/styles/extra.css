@@ -858,3 +858,26 @@ body:has(.about-hero) .md-tabs{
 body:has(.about-hero) .md-main{
   margin-top: 100vh;
 }
+
+/* =========================================================
+   FIX: Hero skal starte helt øverst (ikke under topbar)
+   ========================================================= */
+body:has(.about-hero) .md-main{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body:has(.about-hero) .md-main__inner{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Fjern den “reserverte” høyden Material legger på header/tabs */
+body:has(.about-hero) .md-container{
+  padding-top: 0 !important;
+}
+
+/* Sørg for at heroen faktisk ligger helt i topp */
+body:has(.about-hero) .about-hero{
+  margin-top: 0 !important;
+}
