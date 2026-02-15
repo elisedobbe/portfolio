@@ -881,3 +881,33 @@ body:has(.about-hero) .md-container{
 body:has(.about-hero) .about-hero{
   margin-top: 0 !important;
 }
+
+/* =========================================================
+   ABOUT HERO – force full-bleed + helt opp til topp
+   ========================================================= */
+
+/* Unngå rare 100vw/scrollbar-greier som kan gi stripe på høyre side */
+body:has(.about-hero){
+  overflow-x: hidden !important;
+}
+
+/* Fjern all topp-luft i content-wrapper på about-siden */
+body:has(.about-hero) .md-content,
+body:has(.about-hero) .md-content__inner{
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Hero: 100% viewport-bredde og helt opp */
+body:has(.about-hero) .about-hero{
+  width: 100vw !important;
+  max-width: 100vw !important;
+
+  /* full-bleed på begge sider */
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+
+  /* helt opp */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
