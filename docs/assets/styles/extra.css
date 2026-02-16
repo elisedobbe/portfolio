@@ -683,7 +683,11 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   display: none !important;
 }
 
-/* Align tabs til bunnen */
+/* Align ALLE tabs til bunnen */
+.md-tabs {
+  align-items: flex-end !important;
+}
+
 .md-tabs__inner {
   align-items: flex-end !important;
   padding-bottom: 16px !important;
@@ -691,4 +695,13 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 
 .md-tabs__list {
   align-items: flex-end !important;
+}
+
+.md-tabs__item {
+  align-items: flex-end !important;
+  display: flex !important;
+}
+
+.md-tabs__link {
+  align-self: flex-end !important;
 }
