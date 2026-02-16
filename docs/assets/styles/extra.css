@@ -662,3 +662,11 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   color: var(--fg) !important;
   margin: 0 !important;
 }
+
+/* Force tabs full width */
+.md-tabs > .md-grid {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
