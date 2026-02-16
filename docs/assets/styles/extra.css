@@ -705,3 +705,16 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 .md-tabs__link {
   align-self: flex-end !important;
 }
+
+.md-tabs__item:first-child {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.md-tabs__item:first-child .md-tabs__link {
+  line-height: 1 !important;
+  padding-bottom: 0 !important;
+  vertical-align: bottom !important;
+  display: flex !important;
+  align-items: flex-end !important;
+}
