@@ -667,6 +667,6 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 .md-tabs > .md-grid {
   max-width: none !important;
   width: 100% !important;
-  padding: 0 !important;
+  padding: 0 var(--edge) !important;
   margin: 0 !important;
 }
