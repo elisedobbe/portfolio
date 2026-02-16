@@ -718,3 +718,8 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   display: flex !important;
   align-items: flex-end !important;
 }
+
+/* Skyv ELISE DOBBE til venstre, resten til høyre */
+.md-tabs__item:first-child {
+  margin-right: auto !important;
+}
