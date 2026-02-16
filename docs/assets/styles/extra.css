@@ -656,3 +656,7 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   color: var(--fg) !important;
   margin: 0 !important;
 }
+/* Make ELISE DOBBE clickable */
+.md-header__title {
+  cursor: pointer !important;
+}
