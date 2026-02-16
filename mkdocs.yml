@@ -4,8 +4,7 @@ nav:
   - Home: index.md
   - Projects: projects.md
   - About me: about.md
-  - Projects:
-    - Camel Hoe: camel-hoe.md
+  - Camel Hoe: camel-hoe.md
 
 theme:
   name: material
