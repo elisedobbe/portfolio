@@ -78,7 +78,7 @@
   --accent:   #acdcff;
   --line:     rgba(253,254,255,0.1);
   --edge:     45px;
-  --header-h: 68px;
+  --header-h: 64px;
   --ease:     cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -190,26 +190,26 @@ body,
   overflow: hidden !important;
 }
 
-/* Site name */
+/* Site name â€” uppercase, TT Fors, left side */
 .md-header__title,
 .md-header__title .md-header__topic,
 .md-header__topic {
   font-family: "TT Fors", sans-serif !important;
   font-weight: 300 !important;
   color: var(--fg) !important;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 18px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  font-size: 16px !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Hide page subtitle in header */
+/* Hide page subtitle that appears in header */
 .md-header__title .md-header__topic + .md-header__topic {
   display: none !important;
 }
 
-/* Hamburger â€” right side */
+/* Hamburger â€” right side, mobile only */
 .md-header__button.md-icon[for="__drawer"] {
   order: 10 !important;
   margin-left: auto !important;
@@ -217,7 +217,7 @@ body,
 }
 
 /* =========================
-   TABS â€” desktop nav (right side)
+   TABS â€” desktop nav, right side
    ========================= */
 
 .md-tabs {
@@ -248,14 +248,15 @@ body,
   padding: 0 !important;
 }
 
+/* Nav links â€” Muli, NOT uppercase, dimmed */
 .md-tabs__link {
   font-family: "Muli", sans-serif !important;
   font-weight: 300 !important;
   color: var(--fg) !important;
-  opacity: 0.55 !important;
-  font-size: 13px !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
+  opacity: 0.6 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
   background: transparent !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -281,14 +282,14 @@ body,
   display: none !important;
 }
 
-/* Desktop: hide hamburger, show tabs */
+/* Desktop: hide hamburger */
 @media (min-width: 960px) {
   .md-header__button.md-icon[for="__drawer"] {
     display: none !important;
   }
 }
 
-/* Mobile: hide tabs */
+/* Mobile: hide tabs, show hamburger */
 @media (max-width: 959px) {
   .md-tabs {
     display: none !important;
