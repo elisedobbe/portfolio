@@ -167,42 +167,6 @@ body, .md-typeset, .md-content, .md-content__inner {
 .md-header__button.md-icon[for="__drawer"] {
   display: none !important;
 }
-
-/* =========================
-   TABS â€” fixed top right, NOT italic
-   ========================= */
-
-.md-tabs {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  position: fixed !important;
-  top: 0 !important;
-  right: 0 !important;
-  left: auto !important;
-  height: 109px !important;
-  z-index: 200 !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-.md-tabs__inner {
-  padding: 0 var(--edge) !important;
-  height: 109px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-.md-tabs__list {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 40px !important;
-  align-items: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none !important;
-}
-
 .md-tabs__link {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
@@ -225,8 +189,6 @@ body, .md-typeset, .md-content, .md-content__inner {
 .md-tabs__link:hover { opacity: 0.6 !important; }
 .md-tabs__link--active { opacity: 1 !important; }
 
-.md-tabs__item:first-child { display: none !important; }
-
 @media (max-width: 959px) {
   .md-tabs { display: none !important; }
   .md-header__button.md-icon[for="__drawer"] {
@@ -235,7 +197,6 @@ body, .md-typeset, .md-content, .md-content__inner {
     color: var(--fg) !important;
   }
 }
-
 /* =========================
    FOOTER
    ========================= */
