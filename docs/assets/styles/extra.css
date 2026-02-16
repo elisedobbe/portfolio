@@ -1,3 +1,12 @@
+/* =========================================================
+   ELISE DOBBE â€” from Figma
+   bg: #1e1e1e  |  text: #fdfeff
+   ========================================================= */
+
+/* =========================
+   FONT LOADS
+   ========================= */
+
 @font-face {
   font-family: "TT Fors";
   src: url("../fonts/tt-fors/TT-Fors4.ttf") format("truetype");
@@ -122,33 +131,78 @@ body, .md-typeset, .md-content, .md-content__inner {
 }
 
 /* =========================
-   HEADER
-   ELISE DOBBE: TT Fors Light 36px, left
+   HEADER â€” hidden, tabs take over
    ========================= */
 
 .md-header {
-  background: var(--bg) !important;
+  background: transparent !important;
   box-shadow: none !important;
   border-bottom: none !important;
-  height: 109px !important;
-  position: sticky !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  position: absolute !important;
   top: 0 !important;
   z-index: 100 !important;
 }
 
 .md-header__inner {
-  height: 109px !important;
-  padding: 24px var(--edge) !important;
-  max-width: none !important;
-  display: flex !important;
-  align-items: center !important;
+  display: none !important;
 }
 
 .md-header__button.md-logo { display: none !important; }
+.md-header__title { display: none !important; }
+.md-header__button.md-icon[for="__drawer"] { display: none !important; }
 
-.md-header__title,
-.md-header__title .md-header__topic,
-.md-header__topic {
+/* =========================
+   TABS â€” full width, ELISE DOBBE left, nav right
+   ========================= */
+
+.md-tabs {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 109px !important;
+  z-index: 200 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  width: 100% !important;
+}
+
+.md-tabs__inner {
+  padding: 0 var(--edge) 16px !important;
+  height: 109px !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.md-tabs__list {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 40px !important;
+  align-items: flex-end !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  list-style: none !important;
+}
+
+/* ELISE DOBBE â€” first tab, pushed to left */
+.md-tabs__item:first-child {
+  display: flex !important;
+  align-items: flex-end !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+}
+
+.md-tabs__item:first-child .md-tabs__link {
   font-family: "TT Fors", sans-serif !important;
   font-weight: 300 !important;
   font-style: normal !important;
@@ -156,17 +210,21 @@ body, .md-typeset, .md-content, .md-content__inner {
   letter-spacing: 2.52px !important;
   text-transform: uppercase !important;
   color: var(--fg) !important;
+  opacity: 1 !important;
+  line-height: 1 !important;
+  padding: 0 !important;
   margin: 0 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+/* Projects + About me â€” right side */
+.md-tabs__item {
+  display: flex !important;
+  align-items: flex-end !important;
   padding: 0 !important;
 }
 
-.md-header__title .md-header__topic + .md-header__topic {
-  display: none !important;
-}
-
-.md-header__button.md-icon[for="__drawer"] {
-  display: none !important;
-}
 .md-tabs__link {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
@@ -183,7 +241,8 @@ body, .md-typeset, .md-content, .md-content__inner {
   border-bottom: none !important;
   text-decoration: none !important;
   transition: opacity 0.2s var(--ease) !important;
-  display: block !important;
+  display: flex !important;
+  align-items: flex-end !important;
 }
 
 .md-tabs__link:hover { opacity: 0.6 !important; }
@@ -191,12 +250,19 @@ body, .md-typeset, .md-content, .md-content__inner {
 
 @media (max-width: 959px) {
   .md-tabs { display: none !important; }
+  .md-header {
+    height: 64px !important;
+    background: var(--bg) !important;
+    display: flex !important;
+  }
+  .md-header__inner { display: flex !important; }
   .md-header__button.md-icon[for="__drawer"] {
     display: flex !important;
     margin-left: auto !important;
     color: var(--fg) !important;
   }
 }
+
 /* =========================
    FOOTER
    ========================= */
@@ -232,17 +298,6 @@ body:has(.home-hero) .md-content__inner {
   margin-top: 0 !important;
 }
 
-/* On home page, make header transparent so it sits over the hero */
-body:has(.home-hero) .md-header {
-  background: transparent !important;
-  position: absolute !important;
-  top: 0; left: 0; right: 0;
-  z-index: 50 !important;
-}
-body:has(.home-hero) .md-tabs {
-  background: transparent !important;
-}
-
 .home-hero {
   position: relative;
   width: 100vw;
@@ -272,7 +327,6 @@ body:has(.home-hero) .md-tabs {
   );
 }
 
-/* ELISE DOBBE centered on hero */
 .home-hero__text {
   position: absolute;
   bottom: 15%;
@@ -285,7 +339,7 @@ body:has(.home-hero) .md-tabs {
 
 .home-hero__name {
   font-family: "TT Fors", sans-serif !important;
-  font-weight: 1000 !important;
+  font-weight: 300 !important;
   font-style: normal !important;
   font-size: clamp(60px, 9vw, 120px) !important;
   letter-spacing: 8.4px !important;
@@ -301,15 +355,6 @@ body:has(.home-hero) .md-tabs {
    ========================================================= */
 
 body:has(.about-hero) .md-typeset > h1:first-child { display: none !important; }
-
-body:has(.about-hero) .md-header {
-  background: transparent !important;
-  border-bottom: none !important;
-  position: absolute !important;
-  top: 0; left: 0; right: 0;
-  z-index: 50;
-}
-body:has(.about-hero) .md-tabs { background: transparent !important; }
 body:has(.about-hero) .md-container,
 body:has(.about-hero) .md-main,
 body:has(.about-hero) .md-main__inner,
@@ -404,7 +449,7 @@ body:has(.project-grid) .md-typeset > h1:first-child { display: none !important;
   grid-template-columns: repeat(2, 1fr);
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: 40px var(--edge) 80px;
+  padding: 140px var(--edge) 80px;
   gap: 64px;
 }
 
@@ -616,71 +661,4 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   letter-spacing: 1.26px !important;
   color: var(--fg) !important;
   margin: 0 !important;
-}
-/* Make ELISE DOBBE clickable */
-.md-header__title {
-  cursor: pointer !important;
-}
-
-/* ELISE DOBBE som første tab — venstre side */
-.md-tabs__item:first-child {
-  display: flex !important;
-  margin-right: auto !important;
-}
-
-.md-tabs__item:first-child .md-tabs__link {
-  font-family: "TT Fors", sans-serif !important;
-  font-weight: 300 !important;
-  font-style: normal !important;
-  font-size: 36px !important;
-  letter-spacing: 2.52px !important;
-  text-transform: uppercase !important;
-  color: #fdfeff !important;
-  opacity: 1 !important;
-}
-
-/* Skjul gammel ELISE DOBBE i header */
-.md-header__title {
-  display: none !important;
-}
-
-/* Align ALLE tabs til bunnen */
-.md-tabs {
-  align-items: flex-end !important;
-}
-
-.md-tabs__inner {
-  align-items: flex-end !important;
-  padding-bottom: 16px !important;
-}
-
-.md-tabs__list {
-  align-items: flex-end !important;
-}
-
-.md-tabs__item {
-  align-items: flex-end !important;
-  display: flex !important;
-}
-
-.md-tabs__link {
-  align-self: flex-end !important;
-}
-
-.md-tabs__item:first-child {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.md-tabs__item:first-child .md-tabs__link {
-  line-height: 1 !important;
-  padding-bottom: 0 !important;
-  vertical-align: bottom !important;
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-/* Skyv ELISE DOBBE til venstre, resten til høyre */
-.md-tabs__item:first-child {
-  margin-right: auto !important;
 }
