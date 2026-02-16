@@ -324,7 +324,7 @@ body:has(.home-hero) .md-tabs {
 
 .home-hero__name {
   font-family: "TT Fors", sans-serif !important;
-  font-weight: 500 !important;
+  font-weight: 1000 !important;
   font-style: normal !important;
   font-size: clamp(60px, 9vw, 120px) !important;
   letter-spacing: 8.4px !important;
