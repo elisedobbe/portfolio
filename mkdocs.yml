@@ -1,7 +1,7 @@
 site_name: ELISE DOBBE
 
 nav:
-  - Home: index.md
+  - ELISE DOBBE: index.md
   - Projects: projects.md
   - About me: about.md
 
@@ -20,6 +20,6 @@ plugins: []
 
 extra_css:
   - assets/styles/extra.css
-  
+
 extra_javascript:
   - assets/javascripts/extra.js
