@@ -677,3 +677,18 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   color: #fdfeff !important;
   opacity: 1 !important;
 }
+
+/* Skjul gammel ELISE DOBBE i header */
+.md-header__title {
+  display: none !important;
+}
+
+/* Align tabs til bunnen */
+.md-tabs__inner {
+  align-items: flex-end !important;
+  padding-bottom: 16px !important;
+}
+
+.md-tabs__list {
+  align-items: flex-end !important;
+}
