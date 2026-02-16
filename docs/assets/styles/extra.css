@@ -1,14 +1,3 @@
-/* =========================================================
-   ELISE DOBBE â€” from Figma
-   bg: #1e1e1e  |  text: #fdfeff  |  accent: #acdcff
-   Header: TT Fors Light 36px / tracking 2.52px
-   Nav: Muli Regular 16px italic / tracking -0.08px
-   ========================================================= */
-
-/* =========================
-   FONT LOADS
-   ========================= */
-
 @font-face {
   font-family: "TT Fors";
   src: url("../fonts/tt-fors/TT-Fors4.ttf") format("truetype");
@@ -74,7 +63,7 @@
   --bg:      #1e1e1e;
   --fg:      #fdfeff;
   --fg-dim:  rgba(253,254,255,0.45);
-  --line:    rgba(0,0,0,0.15);
+  --line:    rgba(253,254,255,0.1);
   --edge:    64px;
   --ease:    cubic-bezier(0.25, 0.1, 0.25, 1);
 }
@@ -94,10 +83,9 @@ body, .md-container, .md-main {
 body, .md-typeset, .md-content, .md-content__inner {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 18px !important;
   line-height: 1.9 !important;
-  letter-spacing: 1.26px !important;
   color: var(--fg) !important;
 }
 
@@ -106,7 +94,6 @@ body, .md-typeset, .md-content, .md-content__inner {
   font-weight: 300 !important;
   font-style: normal !important;
   color: var(--fg) !important;
-  letter-spacing: 1.96px !important;
   text-transform: uppercase !important;
 }
 
@@ -135,9 +122,8 @@ body, .md-typeset, .md-content, .md-content__inner {
 }
 
 /* =========================
-   HEADER â€” from Figma: h-109px, px-64px
-   ELISE DOBBE: TT Fors Light, 36px, tracking 2.52px, uppercase, left
-   Nav: Muli Regular italic, 16px, tracking -0.08px, right
+   HEADER
+   ELISE DOBBE: TT Fors Light 36px, left
    ========================= */
 
 .md-header {
@@ -156,15 +142,10 @@ body, .md-typeset, .md-content, .md-content__inner {
   max-width: none !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
 }
 
-/* Hide logo icon */
-.md-header__button.md-logo {
-  display: none !important;
-}
+.md-header__button.md-logo { display: none !important; }
 
-/* ELISE DOBBE â€” TT Fors Light, 36px, tracking 2.52px */
 .md-header__title,
 .md-header__title .md-header__topic,
 .md-header__topic {
@@ -177,25 +158,22 @@ body, .md-typeset, .md-content, .md-content__inner {
   color: var(--fg) !important;
   margin: 0 !important;
   padding: 0 !important;
-  flex: none !important;
 }
 
-/* Hide page subtitle shown in header */
 .md-header__title .md-header__topic + .md-header__topic {
   display: none !important;
 }
 
-/* Hide hamburger on desktop */
 .md-header__button.md-icon[for="__drawer"] {
   display: none !important;
 }
 
 /* =========================
-   TABS â€” Nav: Muli italic 16px, right side
+   TABS â€” fixed top right, NOT italic
    ========================= */
 
 .md-tabs {
-  background: var(--bg) !important;
+  background: transparent !important;
   box-shadow: none !important;
   border: none !important;
   position: fixed !important;
@@ -217,17 +195,18 @@ body, .md-typeset, .md-content, .md-content__inner {
 
 .md-tabs__list {
   display: flex !important;
+  flex-direction: row !important;
   gap: 40px !important;
   align-items: center !important;
   margin: 0 !important;
   padding: 0 !important;
+  list-style: none !important;
 }
 
-/* Nav links â€” Muli Regular italic, 16px, tracking -0.08px */
 .md-tabs__link {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 16px !important;
   letter-spacing: -0.08px !important;
   text-transform: none !important;
@@ -240,12 +219,12 @@ body, .md-typeset, .md-content, .md-content__inner {
   border-bottom: none !important;
   text-decoration: none !important;
   transition: opacity 0.2s var(--ease) !important;
+  display: block !important;
 }
 
 .md-tabs__link:hover { opacity: 0.6 !important; }
 .md-tabs__link--active { opacity: 1 !important; }
 
-/* Hide Home tab */
 .md-tabs__item:first-child { display: none !important; }
 
 @media (max-width: 959px) {
@@ -258,7 +237,7 @@ body, .md-typeset, .md-content, .md-content__inner {
 }
 
 /* =========================
-   FOOTER â€” Muli italic 13px, tracking -0.26px
+   FOOTER
    ========================= */
 
 .md-footer {
@@ -287,13 +266,27 @@ body, .md-typeset, .md-content, .md-content__inner {
 
 body:has(.home-hero) .md-typeset > h1:first-child { display: none !important; }
 body:has(.home-hero) .md-main__inner,
-body:has(.home-hero) .md-content__inner { padding-top: 0 !important; margin-top: 0 !important; }
+body:has(.home-hero) .md-content__inner {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* On home page, make header transparent so it sits over the hero */
+body:has(.home-hero) .md-header {
+  background: transparent !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0;
+  z-index: 50 !important;
+}
+body:has(.home-hero) .md-tabs {
+  background: transparent !important;
+}
 
 .home-hero {
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  height: calc(100vh - 109px);
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -311,11 +304,35 @@ body:has(.home-hero) .md-content__inner { padding-top: 0 !important; margin-top:
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(30,30,30,0.5) 0%,
+    rgba(30,30,30,0.35) 0%,
     transparent 30%,
-    transparent 60%,
-    rgba(30,30,30,0.8) 100%
+    transparent 55%,
+    rgba(30,30,30,0.85) 100%
   );
+}
+
+/* ELISE DOBBE centered on hero */
+.home-hero__text {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-hero__name {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  font-size: clamp(60px, 9vw, 120px) !important;
+  letter-spacing: 8.4px !important;
+  text-transform: uppercase !important;
+  color: var(--fg) !important;
+  margin: 0 !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
 }
 
 /* =========================================================
@@ -366,7 +383,6 @@ body:has(.about-hero) .md-content__inner {
   background: linear-gradient(to top, #1e1e1e 0%, rgba(30,30,30,0.76) 50%, transparent 100%);
 }
 
-/* About section */
 .about-section {
   padding: 64px var(--edge) 80px;
 }
@@ -378,7 +394,6 @@ body:has(.about-hero) .md-content__inner {
   max-width: 1152px;
 }
 
-/* "ABOUT ME" / "EDUCATION" headings â€” TT Fors Light 28px */
 .about-col h2 {
   font-family: "TT Fors", sans-serif !important;
   font-weight: 300 !important;
@@ -391,7 +406,6 @@ body:has(.about-hero) .md-content__inner {
   line-height: normal !important;
 }
 
-/* Body text â€” Muli Regular italic 18px */
 .about-col p {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
@@ -403,7 +417,6 @@ body:has(.about-hero) .md-content__inner {
   margin-bottom: 0 !important;
 }
 
-/* STUDIES label â€” TT Fors Light, not italic */
 .about-studies-label {
   font-family: "TT Fors", sans-serif !important;
   font-weight: 300 !important;
@@ -420,7 +433,7 @@ body:has(.about-hero) .md-content__inner {
 }
 
 /* =========================================================
-   PROJECTS PAGE â€” 2-col grid, hover-to-play
+   PROJECTS PAGE
    ========================================================= */
 
 body:has(.project-grid) .md-typeset > h1:first-child { display: none !important; }
@@ -428,13 +441,10 @@ body:has(.project-grid) .md-typeset > h1:first-child { display: none !important;
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: 0 var(--edge);
-  padding-top: 40px;
+  padding: 40px var(--edge) 80px;
   gap: 64px;
-  padding-bottom: 80px;
 }
 
 .project-card {
@@ -520,7 +530,6 @@ body:has(.project-grid) .md-typeset > h1:first-child { display: none !important;
   z-index: 4;
 }
 
-/* Title â€” TT Fors Light */
 .project-card__title {
   font-family: "TT Fors", sans-serif !important;
   font-weight: 300 !important;
@@ -533,7 +542,6 @@ body:has(.project-grid) .md-typeset > h1:first-child { display: none !important;
   line-height: 1.9 !important;
 }
 
-/* Meta â€” Muli italic */
 .project-card__meta {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
@@ -560,14 +568,12 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   font-family: "Muli", sans-serif !important;
   font-style: italic !important;
   font-size: 13px !important;
-  letter-spacing: 0.04em !important;
   color: var(--fg-dim) !important;
   text-decoration: none !important;
   border-bottom: none !important;
   padding: 32px var(--edge) 20px;
   transition: color 0.2s var(--ease);
 }
-
 .film-back:hover { color: var(--fg) !important; }
 
 .film-video {
@@ -576,7 +582,6 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   background: #000;
   aspect-ratio: 16/9;
 }
-
 .film-video iframe {
   width: 100%;
   height: 100%;
@@ -596,7 +601,6 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   color: var(--fg-dim) !important;
   margin: 0 0 12px !important;
   display: block;
-  letter-spacing: 0.04em;
 }
 
 .film-info__title {
@@ -617,7 +621,7 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   flex-wrap: wrap;
   margin-bottom: 36px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(253,254,255,0.1);
+  border-bottom: 1px solid var(--line);
 }
 
 .film-info__meta-item {
