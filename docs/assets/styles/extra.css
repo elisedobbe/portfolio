@@ -660,3 +660,20 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 .md-header__title {
   cursor: pointer !important;
 }
+
+/* ELISE DOBBE som første tab — venstre side */
+.md-tabs__item:first-child {
+  display: flex !important;
+  margin-right: auto !important;
+}
+
+.md-tabs__item:first-child .md-tabs__link {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  font-size: 36px !important;
+  letter-spacing: 2.52px !important;
+  text-transform: uppercase !important;
+  color: #fdfeff !important;
+  opacity: 1 !important;
+}
