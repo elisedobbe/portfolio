@@ -20,3 +20,6 @@ plugins: []
 
 extra_css:
   - assets/styles/extra.css
+  
+extra_javascript:
+  - assets/javascripts/extra.js
