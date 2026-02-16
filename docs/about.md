@@ -1,5 +1,5 @@
 <div class="about-hero">
-  <img src="assets/images/ELISE.PNG" alt="Elise Dobbe on set">
+  <img src="../assets/images/ELISE.PNG" alt="Elise Dobbe on set">
   <div class="about-hero__overlay"></div>
 </div>
 
