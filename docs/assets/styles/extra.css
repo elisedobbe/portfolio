@@ -696,3 +696,16 @@ body:has(.home-hero) .md-tabs__item:first-child .md-tabs__link {
   opacity: 0 !important;
   pointer-events: none !important;
 }
+
+/* Kategori-overskrifter på projects-siden */
+.projects-category {
+  font-family: "TT Fors", sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  font-size: 28px !important;
+  letter-spacing: 1.96px !important;
+  text-transform: uppercase !important;
+  color: var(--fg) !important;
+  padding: 60px var(--edge) 0 !important;
+  margin: 0 !important;
+}
