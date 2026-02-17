@@ -32,8 +32,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__title">Pillow Fort — Atlas Sundvor (2025)</p>
-      <p class="project-card__meta">Role: Director of Photography</p>
+      <p class="project-card__meta">Pillow Fort — Atlas Sundvor (2025)</p>
     </div>
   </a>
 
@@ -50,8 +49,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__title">Film tittel (2025)</p>
-      <p class="project-card__meta">Role: —</p>
+      <p class="project-card__meta">Filmtittel (2025)</p>
     </div>
   </a>
 
@@ -68,8 +66,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__title">Film tittel (2025)</p>
-      <p class="project-card__meta">Role: —</p>
+      <p class="project-card__meta">Filmtittel (2025)</p>
     </div>
   </a>
 
@@ -86,8 +83,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__title">Film tittel (2025)</p>
-      <p class="project-card__meta">Role: —</p>
+      <p class="project-card__meta">Filmtittel (2025)</p>
     </div>
   </a>
 
@@ -115,8 +111,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__title">Film tittel (2025)</p>
-      <p class="project-card__meta">Role: —</p>
+      <p class="project-card__meta">Filmtittel (2025)</p>
     </div>
   </a>
 
@@ -133,8 +128,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__title">Film tittel (2025)</p>
-      <p class="project-card__meta">Role: —</p>
+      <p class="project-card__meta">Filmtittel (2025)</p>
     </div>
   </a>
 
