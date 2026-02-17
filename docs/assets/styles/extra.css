@@ -336,8 +336,8 @@ body:has(.home-hero) .md-content__inner {
 }
 
 .home-hero__name {
-  font-family: "TT Fors", sans-serif !important;
-  font-weight: 1000 !important;
+  font-family: "TTM", sans-serif !important;
+  font-weight: 400 !important;
   font-style: normal !important;
   font-size: clamp(60px, 9vw, 120px) !important;
   letter-spacing: 8.4px !important;
