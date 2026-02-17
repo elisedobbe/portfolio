@@ -1,3 +1,5 @@
+<h2 class="projects-category">Director / Gaffer</h2>
+
 <div class="project-grid">
 
   <a class="project-card" href="camel-hoe/">
@@ -21,7 +23,7 @@
   <a class="project-card" href="pillow-fort/">
     <div class="project-card__video">
       <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_2?autoplay=1&mute=1x&controls=0&loop=1&playlist=YOUTUBE_ID_2&modestbranding=1"
+        data-src="https://www.youtube.com/embed/YOUTUBE_ID_2?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_2&modestbranding=1"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
@@ -33,6 +35,107 @@
     <div class="project-card__info">
       <p class="project-card__title">Pillow Fort — Atlas Sundvor (2025)</p>
       <p class="project-card__meta">Role: Director of Photography</p>
+    </div>
+  </a>
+
+  <a class="project-card" href="film-3/">
+    <div class="project-card__video">
+      <iframe
+        data-src="https://www.youtube.com/embed/YOUTUBE_ID_3?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_3&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__title">Film tittel (2025)</p>
+      <p class="project-card__meta">Role: —</p>
+    </div>
+  </a>
+
+  <a class="project-card" href="film-4/">
+    <div class="project-card__video">
+      <iframe
+        data-src="https://www.youtube.com/embed/YOUTUBE_ID_4?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_4&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__title">Film tittel (2025)</p>
+      <p class="project-card__meta">Role: —</p>
+    </div>
+  </a>
+
+  <a class="project-card" href="film-5/">
+    <div class="project-card__video">
+      <iframe
+        data-src="https://www.youtube.com/embed/YOUTUBE_ID_5?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_5&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__title">Film tittel (2025)</p>
+      <p class="project-card__meta">Role: —</p>
+    </div>
+  </a>
+
+</div>
+
+<h2 class="projects-category">Producer</h2>
+
+<div class="project-grid">
+</div>
+
+<h2 class="projects-category">Other</h2>
+
+<div class="project-grid">
+
+  <a class="project-card" href="other-1/">
+    <div class="project-card__video">
+      <iframe
+        data-src="https://www.youtube.com/embed/YOUTUBE_ID_6?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_6&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__title">Film tittel (2025)</p>
+      <p class="project-card__meta">Role: —</p>
+    </div>
+  </a>
+
+  <a class="project-card" href="other-2/">
+    <div class="project-card__video">
+      <iframe
+        data-src="https://www.youtube.com/embed/YOUTUBE_ID_7?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_7&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__title">Film tittel (2025)</p>
+      <p class="project-card__meta">Role: —</p>
     </div>
   </a>
 
@@ -56,21 +159,3 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 </script>
-
-<h2 class="projects-category">Director / Gaffer</h2>
-
-<div class="project-grid">
-  <!-- dine eksisterende kort her -->
-</div>
-
-<h2 class="projects-category">Producer</h2>
-
-<div class="project-grid">
-  <!-- kort her -->
-</div>
-
-<h2 class="projects-category">Other</h2>
-
-<div class="project-grid">
-  <!-- kort her -->
-</div>
