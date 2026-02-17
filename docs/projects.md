@@ -56,3 +56,21 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 </script>
+
+<h2 class="projects-category">Director / Gaffer</h2>
+
+<div class="project-grid">
+  <!-- dine eksisterende kort her -->
+</div>
+
+<h2 class="projects-category">Producer</h2>
+
+<div class="project-grid">
+  <!-- kort her -->
+</div>
+
+<h2 class="projects-category">Other</h2>
+
+<div class="project-grid">
+  <!-- kort her -->
+</div>
