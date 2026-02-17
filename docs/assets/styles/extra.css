@@ -1,12 +1,3 @@
-/* =========================================================
-   ELISE DOBBE â€” from Figma
-   bg: #1e1e1e  |  text: #fdfeff
-   ========================================================= */
-
-/* =========================
-   FONT LOADS
-   ========================= */
-
 @font-face {
   font-family: "TT Fors";
   src: url("../fonts/tt-fors/TT-Fors4.ttf") format("truetype");
@@ -339,7 +330,7 @@ body:has(.home-hero) .md-content__inner {
 
 .home-hero__name {
   font-family: "TT Fors", sans-serif !important;
-  font-weight: 300 !important;
+  font-weight: 600 !important;
   font-style: normal !important;
   font-size: clamp(60px, 9vw, 120px) !important;
   letter-spacing: 8.4px !important;
