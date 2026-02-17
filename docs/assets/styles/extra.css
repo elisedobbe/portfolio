@@ -679,3 +679,9 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
   color: var(--fg) !important;
   margin: 0 !important;
 }
+/* Header får bakgrunn når siden scrolles */
+.md-tabs--active,
+.md-tabs[data-md-state="active"] {
+  background: rgba(30,30,30,0.85) !important;
+  backdrop-filter: blur(8px) !important;
+}
