@@ -709,3 +709,43 @@ body:has(.home-hero) .md-tabs__item:first-child .md-tabs__link {
   padding: 180px var(--edge) 0 !important;
   margin: 0 !important;
 }
+
+/* =========================================================
+   HOME INTRO WITH PORTRAIT
+   ========================================================= */
+
+.home-intro {
+  padding: 100px var(--edge) 120px;
+}
+
+.home-intro__grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.home-intro__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-intro__text p {
+  font-family: "Muli", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 18px !important;
+  line-height: 1.9 !important;
+  letter-spacing: 1.26px !important;
+  margin: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .home-intro__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
