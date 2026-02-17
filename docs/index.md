@@ -6,5 +6,19 @@
   </div>
 </div>
 <div class="home-intro">
-  <p>This website presents a selection of my work as a Gaffer and filmmaker. It offers insight into my visual approach, production experience, and the projects I have contributed to across narrative and experimental film. The site is intended as both a portfolio and a professional overview, highlighting my approach to light, atmosphere, and structured production workflows.</p>
+  <div class="home-intro__grid">
+    <div class="home-intro__image">
+      <img src="assets/images/chop.jpg" alt="Portrait of Elise Dobbe">
+    </div>
+    <div class="home-intro__text">
+      <p>
+        This website presents a selection of my work as a Gaffer and filmmaker. 
+        It offers insight into my visual approach, production experience, and 
+        the projects I have contributed to across narrative and experimental film. 
+        The site is intended as both a portfolio and a professional overview, 
+        highlighting my approach to light, atmosphere, and structured production workflows.
+      </p>
+    </div>
+
+  </div>
 </div>
