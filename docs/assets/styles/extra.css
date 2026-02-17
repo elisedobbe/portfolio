@@ -743,9 +743,3 @@ body:has(.home-hero) .md-tabs__item:first-child .md-tabs__link {
     gap: 40px;
   }
 }
-
-.home-hero__name {
-  font-family: "TTM" !important;
-  letter-spacing: 2px !important;
-  transform: scale(1.02);
-}
