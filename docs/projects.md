@@ -15,8 +15,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__title">Camel Hoe — Sara Hildonen / Masha Skitseaeiva (2025)</p>
-      <p class="project-card__meta">Role: Director of Photography</p>
+      <p class="project-card__meta">Camel Hoe — Sara Hildonen / Masha Skitseaeiva (2025)</p>
     </div>
   </a>
 
