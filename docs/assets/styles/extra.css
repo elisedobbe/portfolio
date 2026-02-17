@@ -27,6 +27,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "TTM";
+  src: url("../fonts/tt-fors/TTM.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Muli";
   src: url("../fonts/muli/Muli-Light.ttf") format("truetype");
   font-weight: 300;
