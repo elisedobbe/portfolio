@@ -706,6 +706,6 @@ body:has(.home-hero) .md-tabs__item:first-child .md-tabs__link {
   letter-spacing: 1.96px !important;
   text-transform: uppercase !important;
   color: var(--fg) !important;
-  padding: 140px var(--edge) 0 !important;
+  padding: 170px var(--edge) 0 !important;
   margin: 0 !important;
 }
