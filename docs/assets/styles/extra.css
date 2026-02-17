@@ -690,3 +690,8 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 .md-top {
   display: none !important;
 }
+
+/* Skjul ELISE DOBBE i header kun på hjemsiden */
+body:has(.home-hero) .md-tabs__item:first-child {
+  display: none !important;
+}
