@@ -280,7 +280,7 @@ body, .md-typeset, .md-content, .md-content__inner {
   padding: 40px var(--edge);
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 13px !important;
   letter-spacing: -0.26px !important;
   line-height: 2.21 !important;
@@ -410,7 +410,7 @@ body:has(.about-hero) .md-content__inner {
 .about-col p {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 18px !important;
   line-height: 1.9 !important;
   letter-spacing: 1.26px !important;
@@ -546,7 +546,7 @@ body:has(.project-grid) .md-typeset > h1:first-child { display: none !important;
 .project-card__meta {
   font-family: "Muli", sans-serif !important;
   font-weight: 400 !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 14px !important;
   letter-spacing: 1.12px !important;
   color: var(--fg) !important;
@@ -567,7 +567,7 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 .film-back {
   display: block;
   font-family: "Muli", sans-serif !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 13px !important;
   color: var(--fg-dim) !important;
   text-decoration: none !important;
@@ -597,7 +597,7 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 
 .film-info__label {
   font-family: "Muli", sans-serif !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 13px !important;
   color: var(--fg-dim) !important;
   margin: 0 0 12px !important;
@@ -643,14 +643,14 @@ body:has(.film-video) .md-typeset > h1:first-child { display: none !important; }
 
 .film-info__meta-value {
   font-family: "Muli", sans-serif !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 16px !important;
   color: var(--fg) !important;
 }
 
 .film-info__desc {
   font-family: "Muli", sans-serif !important;
-  font-style: italic !important;
+  font-style: normal !important;
   font-size: 18px !important;
   line-height: 1.9 !important;
   letter-spacing: 1.26px !important;
