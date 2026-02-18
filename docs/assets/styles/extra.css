@@ -27,7 +27,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "TTM";
+  font-family: "TTM-Hero";
   src: url("../fonts/tt-fors/TTM.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -336,7 +336,7 @@ body:has(.home-hero) .md-content__inner {
 }
 
 .home-hero__name {
-  font-family: "TTM", sans-serif !important;
+  font-family: "TTM-Hero", sans-serif !important;
   font-weight: 400 !important;
   font-style: normal !important;
   font-size: clamp(60px, 9vw, 120px) !important;
