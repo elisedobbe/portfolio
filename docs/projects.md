@@ -5,7 +5,7 @@
   <a class="project-card" href="camel-hoe/">
     <div class="project-card__video">
       <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_1?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_1&modestbranding=1"
+        data-src="[https://www.youtube.com/embed/YOUTUBE_ID_1?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_1&modestbranding=1](https://www.youtube.com/watch?v=eyabwMCRvYk)"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
