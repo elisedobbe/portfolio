@@ -42,6 +42,66 @@
     </div>
   </a>
 
+  <a class="project-card" href="pillow-fort/">
+    <div class="project-card__thumbnail">
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Pillow Fort</div>
+    </div>
+    <div class="project-card__video">
+      <iframe
+        data-src="https://drive.google.com/file/d/1w__Hx0iR-eVdtrJMfa1HTKm2DFcEGrpl/preview"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__meta">Pillow Fort — Atlas Sundvor (2025)</p>
+    </div>
+  </a>
+
+  <a class="project-card" href="untitled-2024/">
+    <div class="project-card__thumbnail">
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Untitled</div>
+    </div>
+    <div class="project-card__video">
+      <iframe
+        data-src="https://drive.google.com/file/d/1Zd1HIhRN1nIodSzwA39CRbEQ64CmlDM_/preview"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__meta">Untitled (2024)</p>
+    </div>
+  </a>
+
+  <a class="project-card" href="relative-brothers/">
+    <div class="project-card__thumbnail">
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Relative Brothers</div>
+    </div>
+    <div class="project-card__video">
+      <iframe
+        data-src="https://drive.google.com/file/d/1O7lU2Dd3V7whjlzEsmdWpKPifTw4UR1J/preview"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__meta">Relative Brothers — Daria Rusalkina (2024)</p>
+    </div>
+  </a>
+
   <a class="project-card" href="web/">
     <div class="project-card__thumbnail">
       <img src="https://img.youtube.com/vi/TwKqE8Oni9Q/maxresdefault.jpg" alt="Web">
@@ -107,13 +167,34 @@
 <h2 class="projects-category">Producer</h2>
 
 <div class="project-grid">
+
+  <a class="project-card" href="breaking-the-cycle/">
+    <div class="project-card__thumbnail">
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Breaking the Cycle</div>
+    </div>
+    <div class="project-card__video">
+      <iframe
+        data-src="https://drive.google.com/file/d/1w__Hx0iR-eVdtrJMfa1HTKm2DFcEGrpl/preview"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__meta">Breaking the Cycle — Nihan Hoşbakan (2023)</p>
+    </div>
+  </a>
+
 </div>
 
 <h2 class="projects-category">Other</h2>
 
 <div class="project-grid">
 
-  <a class="project-card" href="ashes/" target="_blank">
+  <a class="project-card" href="https://www.crew-united.com/de/Ashes-NOT-COMPLETED__338830.html" target="_blank">
     <div class="project-card__thumbnail">
       <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Ashes</div>
     </div>
@@ -126,7 +207,7 @@
     </div>
   </a>
 
-  <a class="project-card" href="unter-haien/" target="_blank">
+  <a class="project-card" href="https://www.filmmakers.eu/de/actors/katharina-schwarzmaier/video/single/543658" target="_blank">
     <div class="project-card__thumbnail">
       <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Unter Haien</div>
     </div>
