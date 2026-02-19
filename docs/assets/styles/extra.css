@@ -748,3 +748,25 @@ body:has(.home-hero) .md-tabs__item:first-child .md-tabs__link {
   font-family: "TTM", sans-serif !important;
   font-weight: 300 !important;
 }
+
+/* Thumbnail images for project cards */
+.project-card__thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.project-card__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card:hover .project-card__thumbnail {
+  opacity: 0;
+  transform: scale(1.05);
+}
