@@ -2,10 +2,27 @@
 
 <div class="project-grid">
 
+  <a class="project-card" href="oracle/">
+    <div class="project-card__video">
+      <iframe
+        data-src="https://drive.google.com/file/d/1U0nDwRXajUllmOyMOHaIpfCS4E7_QOwi/preview"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="project-card__overlay"></div>
+    <div class="project-card__play">
+      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="project-card__info">
+      <p class="project-card__meta">Oracle (2025)</p>
+    </div>
+  </a>
+
   <a class="project-card" href="camel-hoe/">
     <div class="project-card__video">
       <iframe
-        data-src="[https://www.youtube.com/embed/YOUTUBE_ID_1?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_1&modestbranding=1](https://www.youtube.com/watch?v=eyabwMCRvYk)"
+        data-src="https://www.youtube.com/embed/eyabwMCRvYk?autoplay=1&mute=1&controls=0&loop=1&playlist=eyabwMCRvYk&modestbranding=1"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
@@ -19,10 +36,10 @@
     </div>
   </a>
 
-  <a class="project-card" href="pillow-fort/">
+  <a class="project-card" href="web/">
     <div class="project-card__video">
       <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_2?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_2&modestbranding=1"
+        data-src="https://www.youtube.com/embed/TwKqE8Oni9Q?autoplay=1&mute=1&controls=0&loop=1&playlist=TwKqE8Oni9Q&modestbranding=1"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
@@ -32,14 +49,14 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__meta">Pillow Fort — Atlas Sundvor (2025)</p>
+      <p class="project-card__meta">Web — Edy Orr Edwig (2023)</p>
     </div>
   </a>
 
-  <a class="project-card" href="film-3/">
+  <a class="project-card" href="noe-til-kaffen/">
     <div class="project-card__video">
       <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_3?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_3&modestbranding=1"
+        data-src="https://www.youtube.com/embed/GBwhTfMuHWo?autoplay=1&mute=1&controls=0&loop=1&playlist=GBwhTfMuHWo&modestbranding=1"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
@@ -49,14 +66,14 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__meta">Filmtittel (2025)</p>
+      <p class="project-card__meta">Noe til kaffen — Sara Hildonen (2024)</p>
     </div>
   </a>
 
-  <a class="project-card" href="film-4/">
+  <a class="project-card" href="phaenotyp/">
     <div class="project-card__video">
       <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_4?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_4&modestbranding=1"
+        data-src="https://www.youtube.com/embed/erxkNA9QGq0?autoplay=1&mute=1&controls=0&loop=1&playlist=erxkNA9QGq0&modestbranding=1"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
@@ -66,24 +83,7 @@
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="project-card__info">
-      <p class="project-card__meta">Filmtittel (2025)</p>
-    </div>
-  </a>
-
-  <a class="project-card" href="film-5/">
-    <div class="project-card__video">
-      <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_5?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_5&modestbranding=1"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <div class="project-card__overlay"></div>
-    <div class="project-card__play">
-      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-    </div>
-    <div class="project-card__info">
-      <p class="project-card__meta">Filmtittel (2025)</p>
+      <p class="project-card__meta">Phaenotyp // Moon Saloon (Music Video)</p>
     </div>
   </a>
 
@@ -98,37 +98,23 @@
 
 <div class="project-grid">
 
-  <a class="project-card" href="other-1/">
+  <a class="project-card" href="ashes/" target="_blank">
     <div class="project-card__video">
-      <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_6?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_6&modestbranding=1"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">No preview available</div>
     </div>
     <div class="project-card__overlay"></div>
-    <div class="project-card__play">
-      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-    </div>
     <div class="project-card__info">
-      <p class="project-card__meta">Filmtittel (2025)</p>
+      <p class="project-card__meta">Ashes — Runner</p>
     </div>
   </a>
 
-  <a class="project-card" href="other-2/">
+  <a class="project-card" href="unter-haien/" target="_blank">
     <div class="project-card__video">
-      <iframe
-        data-src="https://www.youtube.com/embed/YOUTUBE_ID_7?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_ID_7&modestbranding=1"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">No preview available</div>
     </div>
     <div class="project-card__overlay"></div>
-    <div class="project-card__play">
-      <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-    </div>
     <div class="project-card__info">
-      <p class="project-card__meta">Filmtittel (2025)</p>
+      <p class="project-card__meta">Unter Haien / Still Waters — Guilherme Caeiro (2025)</p>
     </div>
   </a>
 
