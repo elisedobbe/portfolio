@@ -3,6 +3,9 @@
 <div class="project-grid">
 
   <a class="project-card" href="oracle/">
+    <div class="project-card__thumbnail">
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Oracle</div>
+    </div>
     <div class="project-card__video">
       <iframe
         data-src="https://drive.google.com/file/d/1U0nDwRXajUllmOyMOHaIpfCS4E7_QOwi/preview"
@@ -20,6 +23,9 @@
   </a>
 
   <a class="project-card" href="camel-hoe/">
+    <div class="project-card__thumbnail">
+      <img src="https://img.youtube.com/vi/eyabwMCRvYk/maxresdefault.jpg" alt="Camel Hoe">
+    </div>
     <div class="project-card__video">
       <iframe
         data-src="https://www.youtube.com/embed/eyabwMCRvYk?autoplay=1&mute=1&controls=0&loop=1&playlist=eyabwMCRvYk&modestbranding=1"
@@ -37,6 +43,9 @@
   </a>
 
   <a class="project-card" href="web/">
+    <div class="project-card__thumbnail">
+      <img src="https://img.youtube.com/vi/TwKqE8Oni9Q/maxresdefault.jpg" alt="Web">
+    </div>
     <div class="project-card__video">
       <iframe
         data-src="https://www.youtube.com/embed/TwKqE8Oni9Q?autoplay=1&mute=1&controls=0&loop=1&playlist=TwKqE8Oni9Q&modestbranding=1"
@@ -54,6 +63,9 @@
   </a>
 
   <a class="project-card" href="noe-til-kaffen/">
+    <div class="project-card__thumbnail">
+      <img src="https://img.youtube.com/vi/GBwhTfMuHWo/maxresdefault.jpg" alt="Noe til kaffen">
+    </div>
     <div class="project-card__video">
       <iframe
         data-src="https://www.youtube.com/embed/GBwhTfMuHWo?autoplay=1&mute=1&controls=0&loop=1&playlist=GBwhTfMuHWo&modestbranding=1"
@@ -71,6 +83,9 @@
   </a>
 
   <a class="project-card" href="phaenotyp/">
+    <div class="project-card__thumbnail">
+      <img src="https://img.youtube.com/vi/erxkNA9QGq0/maxresdefault.jpg" alt="Phaenotyp">
+    </div>
     <div class="project-card__video">
       <iframe
         data-src="https://www.youtube.com/embed/erxkNA9QGq0?autoplay=1&mute=1&controls=0&loop=1&playlist=erxkNA9QGq0&modestbranding=1"
@@ -99,8 +114,11 @@
 <div class="project-grid">
 
   <a class="project-card" href="ashes/" target="_blank">
+    <div class="project-card__thumbnail">
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Ashes</div>
+    </div>
     <div class="project-card__video">
-      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">No preview available</div>
+      <div style="background: #222; width: 100%; height: 100%;"></div>
     </div>
     <div class="project-card__overlay"></div>
     <div class="project-card__info">
@@ -109,8 +127,11 @@
   </a>
 
   <a class="project-card" href="unter-haien/" target="_blank">
+    <div class="project-card__thumbnail">
+      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Unter Haien</div>
+    </div>
     <div class="project-card__video">
-      <div style="background: #222; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">No preview available</div>
+      <div style="background: #222; width: 100%; height: 100%;"></div>
     </div>
     <div class="project-card__overlay"></div>
     <div class="project-card__info">
