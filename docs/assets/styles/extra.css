@@ -755,7 +755,7 @@ body:has(.home-hero) .md-tabs__item:first-child .md-tabs__link {
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
   transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
 }
 
@@ -768,5 +768,9 @@ body:has(.home-hero) .md-tabs__item:first-child .md-tabs__link {
 
 .project-card:hover .project-card__thumbnail {
   opacity: 0;
-  transform: scale(1.05);
+}
+
+/* Video må være under thumbnail */
+.project-card__video {
+  z-index: 1 !important;
 }
